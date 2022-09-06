@@ -1,35 +1,65 @@
-<div>
-    <p>
-        <mat-form-field appearance="outline">
-            <mat-label>First Name</mat-label>
-            <input matInput placeholder="Placeholder">
-        </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field appearance="outline">
-            <mat-label>Last Name</mat-label>
-            <input matInput placeholder="Placeholder">
-        </mat-form-field>
-    </p>
-    <div class="example-container">
-        <mat-form-field appearance="fill">
-          <mat-label>Enter your email</mat-label>
-          <input matInput placeholder="pat@example.com" required>
-        </mat-form-field>
-    </div>
-    <p>
-        <mat-form-field appearance="outline">
-            <mat-label>Password</mat-label>
-            <input matInput placeholder="Placeholder">
-        </mat-form-field>
-    </p>
-    <p>
-        <mat-form-field appearance="outline">
-            <mat-label>Confirm</mat-label>
-            <input matInput placeholder="Placeholder">
-        </mat-form-field>
-    </p>
-    <mat-checkbox class="example-margin">Show Password</mat-checkbox>
-    <button mat-button color="primary">Primary</button>
+<div class="main">
+    <div class="forms">
+        <form class="" action="">
+            <div class="head">
+                <h1>Create your Fundoo Account</h1>
+            </div>
+            <div class="name">
+                <p class="firstname">
+                    <mat-form-field appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="Placeholder">
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="name">
+                <p class="lastname">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Placeholder">
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="user-name">
+                <div class="example-container">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Enter your email</mat-label>
+                        <input matInput placeholder="pat@example.com" required>
+                    </mat-form-field><br>
+                    <a class="line1">You can use letters, numbers & periods</a>
+                </div>
+            </div>
+            <button mat-stroked-button color="primary">Use my current email addess instead</button>
+            <div class="pass">
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Placeholder">
+                    </mat-form-field>
+                </p>
+            </div>
+            <div class="pass">
+                <p>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirm</mat-label>
+                        <input matInput placeholder="Placeholder">
+                    </mat-form-field>
+                </p>
 
+            </div>
+            <mat-checkbox class="example-margin">Show Password</mat-checkbox>
+            <section class="form-btn">
+                <div>
+                    <button mat-stroked-button color="primary">Sign In Instead</button>
+                </div>
+                <div class="example-button-row">
+                    <button mat-raised-button color="primary">Next</button>
+                </div>
+            </section>
+        </form>
+    </div>
+    <div>
+        <img class="image" src="../../assets/registation-image.png" alt="" >
+        <p class="image-para">One account. All of Google <br> working for you.</p>
+    </div>
 </div>

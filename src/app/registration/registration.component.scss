@@ -1,0 +1,43 @@
+.main{
+    display: flex;
+    position: absolute;
+    top: 46%;
+    left: 49%;
+    transform: translate(-50%,-50%);
+    border: 1px solid #9c9c9c;
+    border-radius: 10px;
+    width: 716px;
+    padding: 56px;
+    height: auto;
+    background: #fff;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+}
+.name{
+    display: inline-block;
+    width: 220px;
+  }
+
+  .line1{
+    font-size: 12px;
+    margin: -30px 0 0 15px;
+  }  
+
+  .form-btn{
+    display: flex;
+    column-gap: 48%;
+    padding-top: 6%;
+}
+.image{
+    position: relative;
+    width: 230px;
+    height: 244px;
+    top: 91px;
+}
+.image-para{
+    position: relative;
+    width: 230px;
+    height: 244px;
+    top: 104px;
+    font-size: larger;
+
+}
