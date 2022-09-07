@@ -25,9 +25,17 @@
 
 }
 
+mat-form-field {
+    display:contents;
+}
+
 .form-logo{
     text-align: center;
     font-size:x-large;
+}
+
+.formcontainer{
+    text-align: center;
 }
 
 .primary{
@@ -39,7 +47,7 @@
   cursor: pointer;
   display: inline-block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   height: 40px;
   line-height: 20px;
@@ -87,6 +95,6 @@
 }
 .form-btn {
     display: flex;
-    column-gap: 48%;
-    padding-top: 6%;
+    column-gap: 68%;
+    padding-top: 7%;
 }
