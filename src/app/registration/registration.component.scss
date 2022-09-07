@@ -1,39 +1,105 @@
-.main{
+.main {
     display: flex;
     position: absolute;
-    top: 46%;
+    top: 48%;
     left: 49%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border: 1px solid #9c9c9c;
     border-radius: 10px;
     width: 716px;
     padding: 56px;
     height: auto;
     background: #fff;
-    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
 }
-.name{
+
+.name {
     display: inline-block;
     width: 220px;
-  }
+}
 
-  .line1{
+.line1 {
     font-size: 12px;
     margin: -30px 0 0 15px;
-  }  
+}
 
-  .form-btn{
+.form-btn {
     display: flex;
     column-gap: 48%;
     padding-top: 6%;
 }
-.image{
+
+.form-logo{
+    font-size: 30px;  
+    font-weight: bold; 
+}
+
+
+.primary{
+    background-color: #f9fafc;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #4971f6;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+    font-family: arial rounded mt;
+}
+
+.signin-primary{
+    background-color: #4971f6;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+    font-family: arial rounded mt;
+}
+  
+
+.image {
     position: relative;
     width: 230px;
     height: 244px;
     top: 91px;
 }
-.image-para{
+
+.image-para {
     position: relative;
     width: 230px;
     height: 244px;
