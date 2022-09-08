@@ -25,9 +25,17 @@
 
 }
 
-mat-form-field {
-    display:contents;
+.example-container{
+    padding: 2.75em 0.75em 0 0.75em;
 }
+
+.user-name{
+    height:130px;
+}
+
+// mat-form-field {
+//     display:contents;
+// }
 
 .form-logo{
     text-align: center;
