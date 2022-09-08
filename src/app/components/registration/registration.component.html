@@ -15,7 +15,7 @@
             </div>
             <h1>Create your Fundoo Account</h1>
         </div>
-        <form class="" action="">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="name">
                 <p class="firstname">
                     <mat-form-field appearance="outline">
@@ -30,7 +30,7 @@
                 <p class="lastname">
                     <mat-form-field appearance="outline">
                         <mat-error>Last Name</mat-error>
-                        <input matInput placeholder="Last Name">
+                        <input matInput placeholder="Last Name" formControlName="lastName">
                         <mat-label>Last Name</mat-label>
                     </mat-form-field>
                 </p>
@@ -39,7 +39,7 @@
                 <div class="example-container">
                     <mat-form-field appearance="outline" style="width:86%">
                         <mat-error>Enter your Email</mat-error>
-                        <input matInput placeholder="User@example.com" >
+                        <input matInput placeholder="User@example.com" formControlName="email" >
                         <mat-label>Enter your Email</mat-label>
                     </mat-form-field><br>
                 </div>
@@ -50,7 +50,7 @@
                 <p>
                     <mat-form-field appearance="outline">
                         <mat-error>Password</mat-error>
-                        <input matInput placeholder="Password">
+                        <input matInput placeholder="Password" formControlName="password">
                         <mat-label>Password</mat-label>
                     </mat-form-field>
                 </p>
@@ -59,7 +59,7 @@
                 <div>
                     <mat-form-field appearance="outline">
                         <mat-error>Confirm Password</mat-error>
-                        <input matInput placeholder="Confirm Password">
+                        <input matInput placeholder="Confirm Password" formControlName="confirmPassword">
                         <mat-label>Confirm Password</mat-label>
                     </mat-form-field>
                 </div>

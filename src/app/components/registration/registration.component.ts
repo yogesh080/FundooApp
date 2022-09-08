@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MustMatch } from './_helpers/must-match.validator';
+// import { MustMatch } from './_helpers/must-match.validator';
 
 
 @Component({
@@ -12,10 +12,12 @@ import { MustMatch } from './_helpers/must-match.validator';
 
 export class RegistrationComponent implements OnInit {
 
-  registerForm!: FormGroup;
+  registerForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder) {
+    
+   }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -26,9 +28,9 @@ export class RegistrationComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required,Validators.minLength(6)]
     }
-    , {
-      validator: MustMatch('password', 'confirmPassword')
-    }
+    // , {
+    //   validator: MustMatch('password', 'confirmPassword')
+    // }
     );
   }
 
@@ -44,12 +46,12 @@ export class RegistrationComponent implements OnInit {
     }
 
     // display form values on success
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
+    // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
   }
 
-  onReset() {
-    this.submitted = false;
-    this.registerForm.reset();
-  }
+  // onReset() {
+  //   this.submitted = false;
+  //   this.registerForm.reset();
+  // }
 
 }
