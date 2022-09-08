@@ -11,6 +11,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegistrationComponent } from './registration/registration.component';
 import { LoginComponent } from './login/login.component';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { EmailComponent } from './email/email.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { LoginComponent } from './login/login.component';
     // routingComponents
 
     RegistrationComponent,
-    LoginComponent
+    LoginComponent,
+    ForgetPasswordComponent,
+    EmailComponent
   ],
   imports: [
     BrowserModule,
