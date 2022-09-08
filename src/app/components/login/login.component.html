@@ -1,36 +1,38 @@
 <div class="main">
     <div class="forms">
-        <form class="" action="">
-            <div class="head">
-                <div class="form-logo">
-                    <span style="color: #4285f4;">F</span>
-                    <span style="color: #ea4335;">u</span>
-                    <span style="color: #fbbc05;">n</span>
-                    <span style="color: #4285f4;">d</span>
-                    <span style="color: #34a853;">o</span>
-                    <span style="color: #e617ca;">o</span>
-                    <span style="color: #ea4335;">N</span>
-                    <span style="color: #fbbc05;">o</span>
-                    <span style="color: #4285f4;">t</span>
-                    <span style="color: #34a853;">e</span>
-                    <h1 class="heading1">Sign in</h1>
-                    <h2 class="heading2">Use your Fundoo Account</h2>
-                </div>
+        <div class="head">
+            <div class="form-logo">
+                <span style="color: #4285f4;">F</span>
+                <span style="color: #ea4335;">u</span>
+                <span style="color: #fbbc05;">n</span>
+                <span style="color: #4285f4;">d</span>
+                <span style="color: #34a853;">o</span>
+                <span style="color: #e617ca;">o</span>
+                <span style="color: #ea4335;">N</span>
+                <span style="color: #fbbc05;">o</span>
+                <span style="color: #4285f4;">t</span>
+                <span style="color: #34a853;">e</span>
+                <h1 class="heading1">Sign in</h1>
+                <h2 class="heading2">Use your Fundoo Account</h2>
             </div>
-            <div class="formcontainer">
+        </div>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="formcontainer">
                 <div class="user-name">
                     <div class="example-container">
-                        <mat-form-field appearance="fill" style="width:61%;">
+                        <mat-form-field appearance="outline" style="width:61%;">
+                            <mat-error>Enter your email</mat-error>
+                            <input matInput placeholder="User@example.com" formControlName="email">
                             <mat-label>Enter your email</mat-label>
-                            <input matInput placeholder="User@example.com" required>
                         </mat-form-field><br>
                     </div>
                 </div>
                 <div class="pass">
                     <div>
                         <mat-form-field appearance="outline" style="width:60%">
+                            <mat-error>Password</mat-error>
+                            <input matInput placeholder="Enter Password" formControlName="password">
                             <mat-label>Password</mat-label>
-                            <input matInput placeholder="Placeholder">
                         </mat-form-field>
                     </div>
                 </div>
