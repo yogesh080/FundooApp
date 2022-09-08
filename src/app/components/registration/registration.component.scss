@@ -34,7 +34,7 @@
 
 .form-btn {
     display: flex;
-    column-gap: 48%;
+    column-gap: 38%;
     padding-top: 6%;
 }
 
@@ -53,7 +53,7 @@
   cursor: pointer;
   display: inline-block;
   font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   height: 40px;
   line-height: 20px;
@@ -98,6 +98,12 @@
   -webkit-user-select: none;
   touch-action: manipulation;
     font-family: arial rounded mt;
+}
+
+
+.example-button-row{
+    top: 100px;
+    padding: 0.78em;
 }
   
 
