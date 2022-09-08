@@ -1,42 +1,46 @@
 <div class="main">
     <div class="forms">
-        <form class="" action="">
-            <div class="head">
-                <div class="form-logo">
-                    <span  style="color: #4285f4;">F</span>
-                    <span  style="color: #ea4335;">u</span>
-                    <span  style="color: #fbbc05;">n</span>
-                    <span  style="color: #4285f4;">d</span>
-                    <span  style="color: #34a853;">o</span>
-                    <span  style="color: #e617ca;">o</span>
-                    <span  style="color: #ea4335;">N</span>
-                    <span  style="color: #fbbc05;">o</span>
-                    <span  style="color: #4285f4;">t</span>
-                    <span  style="color: #34a853;">e</span>
-                  </div>
-                <h1>Create your Fundoo Account</h1>
+        <div class="head">
+            <div class="form-logo">
+                <span style="color: #4285f4;">F</span>
+                <span style="color: #ea4335;">u</span>
+                <span style="color: #fbbc05;">n</span>
+                <span style="color: #4285f4;">d</span>
+                <span style="color: #34a853;">o</span>
+                <span style="color: #e617ca;">o</span>
+                <span style="color: #ea4335;">N</span>
+                <span style="color: #fbbc05;">o</span>
+                <span style="color: #4285f4;">t</span>
+                <span style="color: #34a853;">e</span>
             </div>
+            <h1>Create your Fundoo Account</h1>
+        </div>
+        <form class="" action="">
             <div class="name">
                 <p class="firstname">
                     <mat-form-field appearance="outline">
+                        <mat-error>First Name</mat-error>
+                        <input matInput placeholder="First Name" formControlName="firstName">
                         <mat-label>First Name</mat-label>
-                        <input matInput placeholder="Placeholder">
+
                     </mat-form-field>
                 </p>
             </div>
             <div class="name">
                 <p class="lastname">
                     <mat-form-field appearance="outline">
+                        <mat-error>Last Name</mat-error>
+                        <input matInput placeholder="Last Name">
                         <mat-label>Last Name</mat-label>
-                        <input matInput placeholder="Placeholder">
                     </mat-form-field>
                 </p>
             </div>
             <div class="user-name">
                 <div class="example-container">
-                    <mat-form-field appearance="fill" style="width:86%">
-                        <mat-label>Enter your email</mat-label>
-                        <input matInput placeholder="User@example.com" required>
+                    <mat-form-field appearance="outline" style="width:86%">
+                        <mat-error>Enter your Email</mat-error>
+                        <input matInput placeholder="User@example.com" >
+                        <mat-label>Enter your Email</mat-label>
                     </mat-form-field><br>
                 </div>
                 <a class="line1">You can use letters, numbers & periods</a>
@@ -45,16 +49,18 @@
             <div class="pass">
                 <p>
                     <mat-form-field appearance="outline">
+                        <mat-error>Password</mat-error>
+                        <input matInput placeholder="Password">
                         <mat-label>Password</mat-label>
-                        <input matInput placeholder="Placeholder">
                     </mat-form-field>
                 </p>
             </div>
             <div class="pass">
                 <div>
                     <mat-form-field appearance="outline">
-                        <mat-label>Confirm</mat-label>
-                        <input matInput placeholder="Placeholder">
+                        <mat-error>Confirm Password</mat-error>
+                        <input matInput placeholder="Confirm Password">
+                        <mat-label>Confirm Password</mat-label>
                     </mat-form-field>
                 </div>
 
@@ -71,7 +77,7 @@
         </form>
     </div>
     <div>
-        <img class="image" src="../../assets/registation-image.png" alt="" >
+        <img class="image" src="../../assets/registation-image.png" alt="">
         <p class="image-para">One account. All of Google <br> working for you.</p>
     </div>
 </div>
