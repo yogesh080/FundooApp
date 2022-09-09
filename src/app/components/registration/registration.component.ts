@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-// import { MustMatch } from './_helpers/must-match.validator';
+import { UserServiceService } from 'src/app/services/userService/user-service.service';
 
 
 @Component({
@@ -15,7 +15,7 @@ export class RegistrationComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder, private user: UserServiceService) {
     
    }
 
@@ -26,10 +26,10 @@ export class RegistrationComponent implements OnInit {
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required,Validators.minLength(6)]
+      confirmPassword: ['', Validators.nullValidator]
     }
     // , {
-    //   validator: MustMatch('password', 'confirmPassword')
+    // //   validator: MustMatch('password', 'confirmPassword')
     // }
     );
   }
@@ -42,7 +42,19 @@ export class RegistrationComponent implements OnInit {
 
     // stop here if form is invalid
     if (this.registerForm.invalid) {
-      return;
+      let reqdata ={
+        FirstName: this.registerForm.value.firstName,
+        LastName: this.registerForm.value.lastName,
+        Email: this.registerForm.value.Email,
+        Password: this.registerForm.value.email
+      }
+      this.user.registration(reqdata).subscribe((response:any) => {
+        console.log(response)
+
+      }, error => {
+        console.log(error)
+      }
+      )
     }
 
     // display form values on success
