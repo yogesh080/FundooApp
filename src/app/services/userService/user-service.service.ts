@@ -21,7 +21,7 @@ export class UserServiceService {
         'Content-type':'application/json'
       })
     }
-    console.log("cool");
+    // console.log("cool");
     console.log(reqdata);
     return this.httpService.postService('/User/Register', reqdata, false, header)
   }
