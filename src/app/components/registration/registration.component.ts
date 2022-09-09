@@ -41,12 +41,12 @@ export class RegistrationComponent implements OnInit {
     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.registerForm.invalid) {
+    if (this.registerForm.valid) {
       let reqdata ={
         FirstName: this.registerForm.value.firstName,
         LastName: this.registerForm.value.lastName,
-        Email: this.registerForm.value.Email,
-        Password: this.registerForm.value.email
+        Email: this.registerForm.value.email,
+        Password: this.registerForm.value.password
       }
       this.user.registration(reqdata).subscribe((response:any) => {
         console.log(response)

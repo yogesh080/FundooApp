@@ -11,7 +11,7 @@ export class HttpServiceService {
 
 
   postService(url: string, reqdata: any, token:false, httpOptions: any={}){
-    return this.httpClient.post(this.baseUrl+url,token && httpOptions)
+    return this.httpClient.post(this.baseUrl+url, reqdata)
   }
   
 }

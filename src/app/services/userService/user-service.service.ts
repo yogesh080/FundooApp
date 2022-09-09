@@ -18,10 +18,11 @@ export class UserServiceService {
 
     let header = {
       Headers: new HttpHeaders({
-        'Content-Type':'application/json'
+        'Content-type':'application/json'
       })
     }
-
+    console.log("cool");
+    console.log(reqdata);
     return this.httpService.postService('/User/Register', reqdata, false, header)
   }
 

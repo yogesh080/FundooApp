@@ -6,6 +6,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox'
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -22,7 +23,8 @@ import { EmailComponent } from './components/email/email.component';
     RegistrationComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    EmailComponent,
+    EmailComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { EmailComponent } from './components/email/email.component';
     MatInputModule,
     MatCheckboxModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
