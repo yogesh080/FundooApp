@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserServiceService } from 'src/app/services/userService/user-service.service';
 
 
 @Component({
@@ -11,18 +12,14 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,private user: UserServiceService) {
     
    }
 
   ngOnInit() {
-    this.loginForm = this.formBuilder.group({
-
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
+    this.loginForm = this.formBuilder.group({   
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required,Validators.minLength(6)]
+      password: ['', [Validators.required, Validators.minLength(6)]]
     }
     // , {
     //   validator: MustMatch('password', 'confirmPassword')
@@ -37,8 +34,18 @@ export class LoginComponent implements OnInit {
     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.loginForm.invalid) {
-      return;
+    if (this.loginForm.valid) {
+      let reqdata ={
+        Email: this.loginForm.value.email,
+        Password: this.loginForm.value.password
+      }
+      this.user.login(reqdata).subscribe((response:any) => {
+        console.log(response)
+
+      }, error => {
+        console.log(error)
+      }
+      )
     }
 
     // display form values on success

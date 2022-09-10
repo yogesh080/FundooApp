@@ -16,7 +16,7 @@
                 <h2 class="heading2">Use your Fundoo Account</h2>
             </div>
         </div>
-        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="loginForm">
         <div class="formcontainer">
                 <div class="user-name">
                     <div class="example-container">
@@ -42,7 +42,7 @@
                     <button class="primary">Forget Password</button>
                 </div>
                 <div class="example-button-row">
-                    <button class="signin-primary">Login</button>
+                    <button class="signin-primary" (click)="onSubmit()">Login</button>
                 </div>
             </section>
         </form>

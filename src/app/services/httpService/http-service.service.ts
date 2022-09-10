@@ -11,7 +11,12 @@ export class HttpServiceService {
 
 
   postService(url: string, reqdata: any, token:false, httpOptions: any={}){
-    return this.httpClient.post(this.baseUrl+url, reqdata,token && httpOptions)
+    return this.httpClient.post(this.baseUrl+url, reqdata)
+  }
+
+  
+  putservices(url: string, reqdata: any, token: boolean = false, httpOptions: any = {}) {
+    return this.httpClient.put(this.baseUrl + url, reqdata, token && httpOptions);
   }
   
 }
