@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserServiceService } from 'src/app/services/userService/user-service.service';
 
 @Component({
   selector: 'app-email',
@@ -12,16 +13,12 @@ export class EmailComponent implements OnInit {
   forgetEmailForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,private user: UserServiceService) {
     
    }
 
   ngOnInit() {
     this.forgetEmailForm = this.formBuilder.group({
-
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]],
       confirmPassword: ['', Validators.required,Validators.minLength(6)]
     }
@@ -38,7 +35,20 @@ export class EmailComponent implements OnInit {
     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.forgetEmailForm.invalid) {
+    if (this.forgetEmailForm.valid) {
+      let reqdata = {
+        Password: this.forgetEmailForm.value.password,
+        confirmPassword:this.forgetEmailForm.value.password
+
+      }
+      console.log("cool")
+      this.user.forgetPassword(reqdata).subscribe((response:any) => {
+        console.log(response)
+      },error => {
+        console.log(error)
+      })
+    }
+    else{
       return;
     }
 

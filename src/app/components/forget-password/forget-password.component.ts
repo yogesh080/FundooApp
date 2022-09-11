@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserServiceService } from 'src/app/services/userService/user-service.service';
 
 
 @Component({
@@ -11,18 +12,14 @@ export class ForgetPasswordComponent implements OnInit {
   forgetPasswordForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder,private user: UserServiceService) {
     
    }
 
   ngOnInit() {
     this.forgetPasswordForm = this.formBuilder.group({
 
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', Validators.required,Validators.minLength(6)]
+      email: ['', [Validators.required, Validators.email]]
     }
     // , {
     //   validator: MustMatch('password', 'confirmPassword')
@@ -36,8 +33,22 @@ export class ForgetPasswordComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
 
+    console.log("cool")
+
     // stop here if form is invalid
-    if (this.forgetPasswordForm.invalid) {
+    if (this.forgetPasswordForm.valid) {
+      let reqdata = {
+        Email: this.forgetPasswordForm.value.email,
+      }
+      console.log("cool")
+      this.user.forgetPassword(reqdata).subscribe((response:any) => {
+        console.log(response)
+        console.log("cool")
+      },error => {
+        console.log(error)
+      })
+    }
+    else{
       return;
     }
 

@@ -12,24 +12,32 @@
                 <span style="color: #fbbc05;">o</span>
                 <span style="color: #4285f4;">t</span>
                 <span style="color: #34a853;">e</span>
-                <h1 class="heading1">Find your email</h1>
+                <h1 class="heading1">Email Reset Link</h1>
                 <h2 class="heading2">Enter your recovery email</h2>
             </div>
         </div>
-        <form [formGroup]="forgetEmailForm" (ngSubmit)="onSubmit()">
+        <form [formGroup]="forgetEmailForm" >
             <div class="formcontainer">
                 <div class="user-name">
                     <div class="example-container">
                         <mat-form-field appearance="outline" style="width:90%; height: 80px;">
-                            <mat-error>Enter your email</mat-error>
-                            <input matInput placeholder="User@example.com" formControlName="email">
-                            <mat-label>Enter your email</mat-label>
-                        </mat-form-field><br>
+                            <mat-error> Password can't be empty </mat-error>
+                            <input matInput placeholder="Enter Password" formControlName="password">
+                            <mat-label> Password</mat-label>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="outline" style="width:90%; height: 80px;">
+                            <mat-error>Confirm Password can't be empty  </mat-error>
+                            <input matInput placeholder="Enter Password" formControlName="password">
+                            <mat-label>Confirm Password </mat-label>
+                        </mat-form-field>
+                        
+                        <br>
                     </div>
                 </div>
             </div>
             <section class="form-btn">
-                    <button class="signin-primary">Next</button>
+                    <button class="signin-primary" (click)="onSubmit()">Next</button>
             </section>
         </form>
     </div>
