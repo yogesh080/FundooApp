@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { UserServiceService } from 'src/app/services/userService/user-service.service';
 
 @Component({
@@ -10,11 +11,18 @@ import { UserServiceService } from 'src/app/services/userService/user-service.se
 })
 export class EmailComponent implements OnInit {
 
+
+//   this.token = this.activeRoute.snapshot.paramMap.get('token');
+//     console.log(this.token);
+// private activeRoute: ActivatedRoute
+
   forgetEmailForm: FormGroup;
   submitted = false;
+  token: any;
 
-  constructor(private formBuilder: FormBuilder,private user: UserServiceService) {
-    
+
+  constructor(private formBuilder: FormBuilder,private user: UserServiceService, private activeRoute: ActivatedRoute) {
+
    }
 
   ngOnInit() {
@@ -26,6 +34,8 @@ export class EmailComponent implements OnInit {
     //   validator: MustMatch('password', 'confirmPassword')
     // }
     );
+    this.token = this.activeRoute.snapshot.paramMap.get('token');
+    console.log(this.token);
   }
 
   // convenience getter for easy access to form fields
@@ -35,22 +45,20 @@ export class EmailComponent implements OnInit {
     this.submitted = true;
 
     // stop here if form is invalid
-    if (this.forgetEmailForm.valid) {
+    // if (this.forgetEmailForm.valid) {
+
       let reqdata = {
         Password: this.forgetEmailForm.value.password,
         confirmPassword:this.forgetEmailForm.value.password
-
       }
+
       console.log("cool")
-      this.user.forgetPassword(reqdata).subscribe((response:any) => {
+      this.user.ResetPassword(reqdata,this.token).subscribe((response:any) => {
         console.log(response)
       },error => {
         console.log(error)
-      })
-    }
-    else{
-      return;
-    }
+      }
+      )
 
     // display form values on success
     // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
@@ -62,3 +70,4 @@ export class EmailComponent implements OnInit {
   // }
 
 }
+// }
