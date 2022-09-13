@@ -4,6 +4,8 @@
   position: relative;
   z-index: 2;
   box-shadow: 0px 1.5px lightgray;
+  height: 100%;
+  font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
 }
 
 .header-btn {
@@ -57,12 +59,23 @@
 }
 
 .sidenav-icon {
-  padding-right: 80px;
+  padding-right: 100px;
+  padding: 0 23px;
 }
 
 .menus {
   border-radius: 10px 40px 40px 10px;
   font-weight: 450;
+  padding: 0 35px;
+  // block-size: 30px;
+  //   padding-right: 200px;
+    // border-radius: 100%;
+  // margin-right: 25px;  
+}
+
+
+.menu-items{
+  width: 335px;
 }
 
 .header-icon{
