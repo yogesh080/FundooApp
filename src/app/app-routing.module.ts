@@ -5,12 +5,14 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { EmailComponent } from './components/email/email.component';
 // given emailcomponents password and confirm password for reset link
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:'registration', component:RegistrationComponent},
   {path:'login', component:LoginComponent},
-  {path:'forgetemail', component:ForgetPasswordComponent},
-  {path:'User/ResetPassword/:token', component:EmailComponent}
+  {path:'forgetpassword', component:ForgetPasswordComponent},
+  {path:'User/ResetPassword/:token', component:EmailComponent},
+  {path:'dashboard', component:DashboardComponent}
 ];
 
 @NgModule({

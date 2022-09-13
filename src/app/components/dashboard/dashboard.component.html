@@ -1,0 +1,69 @@
+<body>
+    <div class="main-container" [class.example-is-mobile]="mobileQuery.matches">
+        <mat-toolbar class="main-toolbar">
+            <button mat-icon-button (click)="snav.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <img src="../../../assets/googleKeep/noteLogo.png" alt="" srcset="">
+            <h1 class="h1">NotesKeep</h1>
+            <div class="form-Search" style="margin-left: 95px">
+                <mat-form-field class="search" appearance="fill">
+                    <span style="background-color: none;" mat-icon-button class="search-icon">
+                        <img style="width: 25px;" src="../../../assets/googleKeep/searchsvg.svg" />
+                    </span>
+                    <input class="search-input" matInput placeholder="Search" autocomplete="off" />
+
+                </mat-form-field>
+            </div>
+            <div class="header-btn">
+                <button mat-icon-button class="header-icon">
+                    <img style="width: 27px;" src="../../../assets/googleKeep/reload.svg" />
+                </button>
+                <button mat-icon-button class="header-icon">
+                    <img style="width: 27px;"
+                        src="../../../assets/googleKeep/grid_view_FILL0_wght400_GRAD0_opsz48.svg" />
+                </button>
+                <button mat-icon-button class="header-icon">
+                    <img style="width: 27px;" src="../../../assets/googleKeep/setting.svg" />
+                </button>
+            </div>
+
+            <div class="set-profile">
+                <button mat-icon-button class="header-icon">
+                    <img style="width: 27px;" src="../../../assets/googleKeep/menu.svg" />
+                </button>
+                <button mat-icon-button class="header-icon">
+                    <img style="width: 27px;" src="../../../assets/googleKeep/image.png" />
+                </button>
+            </div>
+
+        </mat-toolbar>
+
+        <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+            <mat-sidenav class="side-nav" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
+                <mat-nav-list class="menu-items">
+                    <a mat-list-item class="menus"><img class="sidenav-icon" src="../../../assets/googleKeep/Notes.svg"
+                            alt=""> Notes</a>
+                    <a mat-list-item class="menus"> <img class="sidenav-icon"
+                            src="../../../assets/googleKeep/remainder.svg" alt=""> Reminders</a>
+                    <a mat-list-item class="menus"> <img class="sidenav-icon" src="../../../assets/googleKeep/edit.svg"
+                            alt=""> Edit labels</a>
+                    <a mat-list-item class="menus"> <img class="sidenav-icon"
+                            src="../../../assets/googleKeep/archive.svg" alt=""> Archive</a>
+                    <a mat-list-item class="menus"> <img class="sidenav-icon" src="../../../assets/googleKeep/bin.svg"
+                            alt=""> Bin</a>
+
+
+
+                </mat-nav-list>
+            </mat-sidenav>
+
+            <mat-sidenav-content>
+                <div style="height:91.8vh; background-color: white;">
+                </div>
+
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</body>

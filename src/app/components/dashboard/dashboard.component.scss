@@ -1,0 +1,82 @@
+.main-toolbar {
+  // display: inline-flex;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0px 1.5px lightgray;
+}
+
+.header-btn {
+  // color: rgb(95, 99, 104);
+  display: flex;
+  justify-content: space-between;
+  margin-left: 46%;
+  column-gap: 12px;
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+  height: 77px;
+  padding: 0px 33px;
+}
+
+.search {
+  width: 350%;
+  font-size: 3px;
+  height: 47px;
+  margin-left: 20%;
+}
+
+.mat-form-field {
+  font-weight: 400;
+  line-height: 4.125;
+}
+.h1 {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0.5%;
+  color: rgb(95 99 104);
+  opacity: 1;
+}
+
+.search-input {
+  width: 85%;
+  padding-left: 12px;
+  font-size: 17px;
+  height: 40px;
+}
+
+// .menu-itemsa:hover{
+//   border-radius: 10px 40px 40px 10px;
+// }
+
+.set-profile {
+  display: flex;
+  margin-left: 3%;
+  column-gap: 12px;
+}
+
+.sidenav-icon {
+  padding-right: 80px;
+}
+
+.menus {
+  border-radius: 10px 40px 40px 10px;
+  font-weight: 450;
+}
+
+.header-icon{
+  border-radius: 180px 180px 180px 180px;
+  padding: 10px;
+}
+
+.header-icon:hover{
+  background-color:rgb(169 145 145 / 16%);
+
+}
+
+
+button {
+  border: none;
+  background-color: white;
+}

@@ -7,6 +7,10 @@ import { MatInputModule } from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox'
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 
 
 import { AppComponent } from './app.component';
@@ -15,6 +19,7 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { LoginComponent } from './components/login/login.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { EmailComponent } from './components/email/email.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 // import { MustMatch } from './components/registration/_helpers/must-match.validator';
 
 @NgModule({
@@ -23,7 +28,8 @@ import { EmailComponent } from './components/email/email.component';
     RegistrationComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    EmailComponent
+    EmailComponent,
+    DashboardComponent
     
   ],
   imports: [
@@ -34,7 +40,11 @@ import { EmailComponent } from './components/email/email.component';
     MatCheckboxModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
