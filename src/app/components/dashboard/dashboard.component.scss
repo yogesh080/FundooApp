@@ -61,6 +61,7 @@
 .sidenav-icon {
   padding-right: 100px;
   padding: 0 23px;
+  position: sticky;
 }
 
 .menus {
@@ -92,4 +93,44 @@
 button {
   border: none;
   background-color: white;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-infix {
+  padding: 1.25em 0 2.75em 11px;
+}
+
+
+.search-area{
+  background:#f1f3f4;
+  border: none;
+  margin-left: 55px;
+  margin-right: -493px;
+  width: 692px;
+  height: 54px;
+  border-radius: 8px;
+}
+
+input{
+  &:focus { 
+    outline: none !important;
+    }
+}
+
+.tooltip{
+  flex-direction: row;
+  box-sizing: border-box;
+  display: flex;
+  place-content: center;
+  align-items: unset;
+}
+
+.tooltip input{
+  border: none;
+  // border: 1px solid red;
+  padding: 0px 2px;
+  background:#f1f3f4;
+  // height: 100%;
+  width: 117%;
+  font-size: 20px;
+  height: 47px;
 }
