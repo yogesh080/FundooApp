@@ -12,8 +12,8 @@
   // color: rgb(95, 99, 104);
   display: flex;
   justify-content: space-between;
-  margin-left: 46%;
-  column-gap: 12px;
+  margin-left: 9%;
+    column-gap: 11px;
 }
 
 .mat-toolbar-row,
@@ -104,7 +104,7 @@ button {
   background:#f1f3f4;
   border: none;
   margin-left: 55px;
-  margin-right: -493px;
+  // margin-right: -493px;
   width: 692px;
   height: 54px;
   border-radius: 8px;
@@ -127,10 +127,10 @@ input{
 .tooltip input{
   border: none;
   // border: 1px solid red;
-  padding: 0px 2px;
+  padding: 0px 12px;
   background:#f1f3f4;
-  // height: 100%;
+  border-radius: 7px;
   width: 117%;
-  font-size: 20px;
+  font-size:  19px;
   height: 47px;
 }

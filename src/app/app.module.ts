@@ -21,6 +21,10 @@ import { LoginComponent } from './components/login/login.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { EmailComponent } from './components/email/email.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { CreateNotesComponent } from './components/create-notes/create-notes.component';
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
+import { IconsComponent } from './components/icons/icons.component';
 // import { MustMatch } from './components/registration/_helpers/must-match.validator';
 
 @NgModule({
@@ -30,7 +34,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     LoginComponent,
     ForgetPasswordComponent,
     EmailComponent,
-    DashboardComponent
+    DashboardComponent,
+    CreateNotesComponent,
+    GetAllNotesComponent,
+    DisplayNotesComponent,
+    IconsComponent
     
   ],
   imports: [
