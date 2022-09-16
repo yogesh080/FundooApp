@@ -43,7 +43,7 @@
                 <img style="width: 27px;" src="../../../assets/googleKeep/image.png" />
             </button>
         </div>
-
+        
     </mat-toolbar>
 
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
@@ -51,25 +51,27 @@
             [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
             <mat-nav-list class="menu-items">
                 <a mat-list-item class="menus"><img class="sidenav-icon" src="../../../assets/googleKeep/Notes.svg"
-                        alt=""> Notes</a>
+                        alt="">&nbsp;&nbsp;&nbsp;Notes</a>
                 <a mat-list-item class="menus"> <img class="sidenav-icon" src="../../../assets/googleKeep/remainder.svg"
-                        alt=""> Reminders</a>
+                        alt="">&nbsp;&nbsp;&nbsp;Reminders</a>
                 <a mat-list-item class="menus"> <img class="sidenav-icon" src="../../../assets/googleKeep/edit.svg"
-                        alt=""> Edit labels</a>
+                        alt="">&nbsp;&nbsp;&nbsp;Edit labels</a>
                 <a mat-list-item class="menus"> <img class="sidenav-icon" src="../../../assets/googleKeep/archive.svg"
-                        alt=""> Archive</a>
+                        alt="">&nbsp;&nbsp;&nbsp;Archive</a>
                 <a mat-list-item class="menus"> <img class="sidenav-icon" src="../../../assets/googleKeep/bin.svg"
-                        alt=""> Bin</a>
-
-
+                        alt="">&nbsp;&nbsp;&nbsp;Bin</a>
 
             </mat-nav-list>
         </mat-sidenav>
 
         <mat-sidenav-content>
-            <div style="height:91.8vh; background-color: white;">
+            <div style="height:90vh; background-color: white;">
+                <div>
+                    <app-get-all-notes></app-get-all-notes>
+                </div>
             </div>
-
         </mat-sidenav-content>
     </mat-sidenav-container>
+    
+    
 </div>

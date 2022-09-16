@@ -1,1 +1,31 @@
-<p>create-notes works!</p>
+<div class="container" fxLayout="column" fxLayoutAlign=" center center">
+    <div class="main-container">
+        <div *ngIf="!show || show"  (click)="onOpen()" fxLayout="row" fxLayoutAlign=" center center" class="title-container">
+            <input class="input-cont2" type="text" placeholder="Title">
+
+            <!-- <button class="btn" mat-list-item>
+                    <img class="img-tag2" style="width: 27px;" src="../../../assets/googleKeep/pin.svg" alt="">
+                </button> -->
+            <div fxLayoutAlign="space-around center" class="notes-icon">
+
+                <img style="width: 27px;" src="../../../assets/googleKeep/newnotes.svg" alt="">
+                <img style="width: 27px;" src="../../../assets/googleKeep/drawing.svg" alt="">
+                <img style="width: 27px;" src="../../../assets/googleKeep/gallary.svg" alt="">
+
+            </div>
+        </div>
+        <div *ngIf="show">
+            <div class="Note-container" fxLayout="row">
+                <textarea class="title" type="text" placeholder="Take a Notes..."></textarea>
+            </div>
+            <div class="img-tag3" fxLayout="row" fxLayoutAlign="space-around center">
+                <img width="24px" src="../../../assets/googleKeep/remaindme.svg" alt="" srcset="">
+                <img width="24px" src="../../../assets/googleKeep/collab.svg" alt="" srcset="">
+                <img width="24px" src="../../../assets/googleKeep/color.svg" alt="" srcset="">
+                <img width="24px" src="../../../assets/googleKeep/gallary.svg" alt="" srcset="">
+                <img width="24px" src="../../../assets/googleKeep/archive2.svg" alt="" srcset="">
+                <img width="23px" src="../../../assets/googleKeep/3dot.svg" alt="" srcset="">
+                <button (click)="createNote()" class="btn-2">close</button>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,272 @@
+
+.container{
+    padding-top: 10px;
+    border: none;
+    // border: 2px solid red;
+
+    // border: 2px solid green;
+    width: 100%;
+
+}
+
+.main-container{
+    border: none;
+    box-shadow: 0px 0px 4px 2px  rgb(20 10 10 / 32%);
+    border-radius: 10px 10px 10px 10px;
+
+    // border: 2px solid red;
+    width: 50%;
+
+}
+
+.title-container{
+    // border: 2px solid red;
+    border-radius: 10px 10px 10px 10px;
+
+    border: none;
+    margin: 0 auto;
+    padding: 0px 23px;
+    background: white;
+    width: 100%;
+    font-size: 20px;
+    height: 48px;
+
+}
+
+.input-cont2{
+    border: none;
+    width: 100%;
+    padding: 0px 23px;
+    background: white;
+    font-size: 20px;
+    height: 44px;
+}
+
+.btn{
+
+    padding: 9px;
+    background: rgb(255 255 255);
+    width: 43px;
+    height: 44.2px;
+    float: right;
+    border: none;
+    }
+
+.Note-container{
+    border: none;
+    // border: 2px solid red;
+    margin: 0 auto;
+    padding: 0px 23px;
+    background: white;
+    width: 100%;
+    font-size: 20px;
+    height: 48px;
+    border-radius: 10px 10px 10px 10px;
+    // box-shadow: 0px 0px 4px 2px  rgb(20 10 10 / 32%);
+    
+
+}
+
+*:focus {
+    outline: none;
+}
+
+.title{
+    border: none;
+    width: 100%;
+    padding: 0px 23px;
+    background: white;
+    font-size: 20px;
+    height: 44px;
+
+}
+
+
+.img-tag3{
+    // border: 2px solid red;
+    border-radius: 10px 10px 10px 10px;
+    border: none;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 23px;
+    background: white;
+    font-size: 20px;
+    height: 48px;
+
+}
+
+.btn-2{
+    background: rgb(255 255 255);
+    width: 95px;
+    height: 41.2px;
+    float: right;
+    font-size: 17px;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+
+    
+}
+.btn-2:hover{
+  background-color:rgba(128, 117, 117, 0.041);
+}
+
+.notes-icon{
+    width: 34%;
+}
+
+
+
+
+// .input-cont1 {
+//     border: none;
+//     box-shadow: 0px 0px 4px 2px  rgb(20 10 10 / 32%);
+//     padding: 0px 23px;
+//     background: white;
+
+//     border-radius: 10px 0px 0px 10px;
+//     width: 100%;
+//     font-size: 20px;
+//     height: 46px;
+// }
+
+// .main-container{
+// // margin-right: 287px;
+// margin: 28px 0px;
+// top: 169px;
+// bottom: 6px;
+// // position: relative;
+// // border: 2px solid red;
+// }
+
+
+
+// input{
+//     &:focus { 
+//       outline: none !important;
+//       border: none !important;
+//       }
+//   }
+// // button{
+// //     &:focus{
+// //         border-style: none !important;
+// //     }
+// // }  
+
+// form{
+//     width: 50%;
+//     margin: 0 auto;
+// }
+
+// .img-tag {
+//     box-shadow: 5px 0px 4px 2px  rgb(20 10 10 / 32%);
+//     background: white;
+    
+//     padding: 0px 23px;
+//     border-radius: 0px 10px 10px 0px;
+//     // width: 15%;
+//     font-size: 20px;
+//     height: 46px;
+
+// }
+
+// .img-tag img {
+//     position: relative;
+//     top: 8px;
+//     left: 0px;
+// }
+
+
+// .main-container2{
+//     // margin-right: 287px;
+//     top: 169px;
+//     bottom: 6px;
+//     // position: relative;
+//     // border: 3px solid red;
+
+// }
+
+// // .titlebar-2{
+// //     padding: 7px 18px 11px 7px;
+// //     background: rgb(241, 243, 244);
+// //     width: 142%;
+// //     font-size: 24px;
+// //     height: 31px;
+// // }
+
+
+// .img-tag2 {
+// float: right;
+
+// }
+
+// .btn{
+//     // border: 1px solid red;
+//     padding: 12px;
+//     background: white;
+//     width: 62px;
+//     height: 46.2px;
+//     float: right;
+//     box-shadow: 5px 0px 5px 0px rgb(20 10 10 / 32%);
+//     border-radius: 0px 10px 0px 0px;
+//     border: none;
+
+// }
+
+// .input-cont2{
+//     border: none;
+//     // border: 1px solid red;
+//     width: 100%;
+//     box-shadow: 4px 3px 8px 3px rgb(20 10 10 / 32%);
+//     padding: 0px 23px;
+//     background: white;
+//     border-radius: 10px 0px 0px 0px;
+//     // width: 38%;
+//     font-size: 20px;
+//     height: 46px;
+// }
+// .textarea{
+//     border: none;
+//     // border: 1px solid red;
+//     width: 48%;
+//     margin: 0 auto;
+//     box-shadow: 1px 8px 7px 0px  rgb(20 10 10 / 32%);
+//     padding: 0px 1%;
+//     background: white;
+//     // border-radius: 10px 0px 0px 10px;
+//     // width: 41%;
+//     font-size: 20px;
+//     height: 45.2px;
+// }
+
+// .img-tag3{
+//     width: 50%;
+//     float: right;
+//     border: none;
+//     box-shadow: 0px 8px 9px -3px  rgb(20 10 10 / 32%);
+
+//     // border: 1px solid rgb(255 0 0);
+//     padding: 0px 21px;
+//     background: rgb(255 255 255);
+//     border-radius: 0px 0px 10px 10px;
+//     margin: 0 auto;
+//     font-size: 20px;
+//     height: 46px;
+
+
+// }
+
+// .btn-2{
+//     background: white;
+//     width: 105px;
+//     height: 46.2px;
+//     float: right;
+//     font-size: 18px;
+//     // box-shadow: 5px 0px 4px 2px  rgb(20 10 10 / 32%);
+//     border: none;
+    
+// }
+
+// .take-notes-wrapper {
+//     width: 100%;
+// }
+

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-create-notes',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateNotesComponent implements OnInit {
 
-  constructor() { }
+  show = false;
+  noteform = FormGroup;
+
+  constructor( private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+  }
+
+  onOpen() {
+    this.show = true;
+  }
+  createNote(){
+    this.show=false;
   }
 
 }
