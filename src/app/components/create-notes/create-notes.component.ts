@@ -1,5 +1,7 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NoteServicesService } from 'src/app/services/noteService/note-services.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-create-notes',
@@ -8,19 +10,56 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CreateNotesComponent implements OnInit {
 
+  noteForm: FormGroup;
   show = false;
-  noteform = FormGroup;
 
-  constructor( private formBuilder: FormBuilder) { }
+  constructor(private note: NoteServicesService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+
+    this.noteForm = this.formBuilder.group({
+      title: ['', Validators.required],
+      description: ['', Validators.required]
+
+    });
   }
+
 
   onOpen() {
     this.show = true;
   }
-  createNote(){
-    this.show=false;
+  
+
+  onSubmit() {
+    this.show = false;
+
+    if (this.noteForm.valid) {
+      let reqdata = {
+        Title: this.noteForm.value.title,
+        Description: this.noteForm.value.description,
+        Color: "string",
+        Remainder: "2022-09-16T05:18:11.530Z",
+        Image: "string",
+        Archive: true,
+        Pin: true,
+        Trash: true,
+        CreateTime: "2022-09-16T05:18:11.530Z",
+        ModifiedTime: "2022-09-16T05:18:11.530Z"
+      };
+
+      this.note.createNote(reqdata).subscribe((response: any) => {
+        console.log("note created successfully", response);
+        
+      },
+        (error: any) => {
+          console.log(error)
+        }
+
+      )
+    }
+    else {
+      return;
+    }
   }
 
 }

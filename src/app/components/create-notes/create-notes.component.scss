@@ -1,5 +1,6 @@
 
 .container{
+    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
     padding-top: 10px;
     border: none;
     // border: 2px solid red;
@@ -25,7 +26,7 @@
 
     border: none;
     margin: 0 auto;
-    padding: 0px 23px;
+    padding: 0px 31px;
     background: white;
     width: 100%;
     font-size: 20px;
@@ -38,7 +39,7 @@
     width: 100%;
     padding: 0px 23px;
     background: white;
-    font-size: 20px;
+    font-size: 18px;
     height: 44px;
 }
 
@@ -56,9 +57,9 @@
     border: none;
     // border: 2px solid red;
     margin: 0 auto;
-    padding: 0px 23px;
+    // padding: 0px 23px;
     background: white;
-    width: 100%;
+    width: 98%;
     font-size: 20px;
     height: 48px;
     border-radius: 10px 10px 10px 10px;
@@ -74,30 +75,32 @@
 .title{
     border: none;
     width: 100%;
-    padding: 0px 23px;
+    // padding: 0px 23px;
     background: white;
-    font-size: 20px;
+    font-size: 18px;
     height: 44px;
+    margin: 0px -9px;
 
 }
 
 
-.img-tag3{
-    // border: 2px solid red;
-    border-radius: 10px 10px 10px 10px;
-    border: none;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0px 23px;
-    background: white;
-    font-size: 20px;
-    height: 48px;
+// .img-tag3{
+//     // border: 2px solid red;
+//     border-radius: 10px 10px 10px 10px;
+//     border: none;
+//     width: 100%;
+//     margin: 0 auto;
+//     padding: 0px 23px;
+//     background: white;
+//     font-size: 20px;
+//     height: 48px;
 
-}
+// }
 
 .btn-2{
-    background: rgb(255 255 255);
-    width: 95px;
+    margin: 8px 11px 8px 14px;
+    background: rgb(255, 255, 255);
+    width: 24%;
     height: 41.2px;
     float: right;
     font-size: 17px;
@@ -112,6 +115,23 @@
 
 .notes-icon{
     width: 34%;
+}
+
+
+.createicons{
+
+    width: 100%;
+
+}
+
+.icon1{
+  border-radius: 180px 180px 180px 180px;
+    padding: 4px;    
+
+}
+.icon1:hover{
+  background-color:rgb(169 145 145 / 16%);
+
 }
 
 

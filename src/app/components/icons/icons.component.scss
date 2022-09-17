@@ -3,12 +3,26 @@
 //     border: none;
     // width: 100%;
     // margin: 0 auto;
-    // padding: 0px 23px;
+    padding: 0px 4px;
     // background: white;
     // font-size: 20px;
     // height: 40px;
     // width: 100%;
-    margin: 8px 0px 8px 28px;
+    // margin: 8px 0px 8px 28px;
 
+//   border-radius: 180px 180px 180px 180px;
+
+
+
+}
+.icon{
+  border-radius: 180px 180px 180px 180px;
+  padding: 10px;
+
+
+}
+
+.icon:hover{
+  background-color:rgb(169 145 145 / 16%);
 
 }

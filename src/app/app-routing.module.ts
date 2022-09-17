@@ -7,12 +7,16 @@ import { EmailComponent } from './components/email/email.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import { IconsComponent } from './components/icons/icons.component';
 
 const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgetpassword', component: ForgetPasswordComponent },
   { path: 'User/ResetPassword/:token', component: EmailComponent },
+  { path: 'icon', component: IconsComponent },
+
+  
   // {
   //   path: 'dashboard', component: DashboardComponent,
   //   children: [
@@ -21,6 +25,8 @@ const routes: Routes = [
   // }
   { path: 'dashboard', component: DashboardComponent,
     children:[{ path: 'note', component:GetAllNotesComponent},]},
+
+
 ];
 
 @NgModule({
