@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { NoteServicesService } from 'src/app/services/noteService/note-services.service';
+// import { NoteServicesService } from 'src/app/services/noteService/note-services.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserServiceService } from 'src/app/services/userService/user-service.service';
+
 
 
 @Component({
@@ -13,7 +15,7 @@ export class CreateNotesComponent implements OnInit {
   noteForm: FormGroup;
   show = false;
 
-  constructor(private note: NoteServicesService, private formBuilder: FormBuilder) { }
+  constructor(private note: UserServiceService, private formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
 
@@ -31,7 +33,7 @@ export class CreateNotesComponent implements OnInit {
 
   
   onSubmit() {
-    this.show = true;
+    this.show = false;
 
     if (this.noteForm.valid) {
       let reqdata = {
@@ -48,7 +50,7 @@ export class CreateNotesComponent implements OnInit {
       };
 
       this.note.createNote(reqdata,{}).subscribe((response: any) => {
-        console.log("note created successfully", response);
+        console.log( response);
         
       },
         (error: any) => {

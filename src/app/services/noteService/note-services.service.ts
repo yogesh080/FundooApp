@@ -24,15 +24,15 @@ export class NoteServicesService {
 
   //   return this.httpservice.GetService('https://localhost:44306/api/Notes/Read',true,header)
   // }
-  createNote(reqdata:any, token:any){
-    console.log(reqdata);
+  // createNote(reqdata:any, token:any){
+  //   console.log(reqdata);
 
-    let header = {
-      headers: new HttpHeaders({
-        'Content-type':'application/json',
-        'Authorization': 'Bearer ' + token
-      }),
-    };
-    return this.httpService.postService('/Notes/Create',reqdata,true,header)
-  }
+  //   let header = {
+  //     headers: new HttpHeaders({
+  //       'Content-type':'application/json',
+  //       'Authorization': 'Bearer ' + token
+  //     }),
+  //   };
+  //   return this.httpService.postService('/Notes/Create',reqdata,true,header)
+  // }
 }

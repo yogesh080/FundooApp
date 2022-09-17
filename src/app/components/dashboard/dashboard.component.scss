@@ -1,5 +1,4 @@
 .main-toolbar {
-  // display: inline-flex;
   background-color: white;
   position: relative;
   z-index: 2;
@@ -68,10 +67,25 @@
   border-radius: 10px 40px 40px 10px;
   font-weight: 450;
   padding: 0 35px;
-  // block-size: 30px;
-  //   padding-right: 200px;
-    // border-radius: 100%;
-  // margin-right: 25px;  
+}
+
+.menus:hover{
+  background-color: rgb(254 239 195);
+}
+
+
+
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+  display: block;
+  height: 58px;
+  -webkit-tap-highlight-color: rgb(0 0 0 / 0%);
+  width: 100%;
+  padding: 0;
+}
+
+
+.mat-drawer-side {
+  border-right: transparent !important;
 }
 
 
