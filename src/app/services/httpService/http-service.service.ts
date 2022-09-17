@@ -5,6 +5,8 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({providedIn: 'root'})
 
 export class HttpServiceService {
+
+  
   baseUrl= environment.baseurl;
 
   constructor(private httpClient: HttpClient) { }
@@ -12,6 +14,11 @@ export class HttpServiceService {
 
   postService(url: string, reqdata: any, token: boolean =false, httpOptions: any={}){
     return this.httpClient.post(this.baseUrl+url, reqdata, token && httpOptions)
+  }
+
+  GetService(url:string, token: boolean=false, httpOptions:any)
+  {
+      return this.httpClient.get(url,token && httpOptions);
   }
 
   

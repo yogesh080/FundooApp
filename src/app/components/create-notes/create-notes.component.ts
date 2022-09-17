@@ -28,10 +28,10 @@ export class CreateNotesComponent implements OnInit {
   onOpen() {
     this.show = true;
   }
-  
 
+  
   onSubmit() {
-    this.show = false;
+    this.show = true;
 
     if (this.noteForm.valid) {
       let reqdata = {
@@ -47,7 +47,7 @@ export class CreateNotesComponent implements OnInit {
         ModifiedTime: "2022-09-16T05:18:11.530Z"
       };
 
-      this.note.createNote(reqdata).subscribe((response: any) => {
+      this.note.createNote(reqdata,{}).subscribe((response: any) => {
         console.log("note created successfully", response);
         
       },

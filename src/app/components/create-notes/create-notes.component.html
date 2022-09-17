@@ -1,10 +1,17 @@
 <div class="container" fxLayout="column" fxLayoutAlign=" center center">
-    <div class="main-container">
-        <div *ngIf="!show || show" (click)="onOpen()" fxLayout="row" fxLayoutAlign=" center center"
+    <div class="main-container" [formGroup]="noteForm">
+        <div *ngIf="show" fxLayout="row" fxLayoutAlign=" center center"
             class="title-container" [formGroup]="noteForm">
-            <!-- <input class="input-cont2" type="text" placeholder="Title"> -->
-            <input class="title" type="text" placeholder="Take a Notes..." />
+            <input class="title" type="text" placeholder="Title" formControlName="title"  />
+            <button class="btn">
+                <img class="img-tag" style="width: 27px;" src="../../../assets/googleKeep/pin.svg" alt="">
+            </button>
+            
+        </div>
 
+
+        <div *ngIf="!show || show" (click)="onOpen()" class="Note-container" fxLayout="row">
+            <input class="input-cont2" type="text" placeholder="Take a Notes..." formControlName="description"  />
             <div *ngIf="!show" fxLayoutAlign="space-around center" class="notes-icon">
 
                 <img style="width: 27px;" class="icon1" src="../../../assets/googleKeep/newnotes.svg" alt="">
@@ -12,16 +19,7 @@
                 <img style="width: 27px;" class="icon1" src="../../../assets/googleKeep/gallary.svg" alt="">
 
             </div>
-        </div>
-
-
-        <div class="Note-container" *ngIf="show" (click)="onOpen()" fxLayout="row">
-            <input class="input-cont2" type="text" placeholder="Title">
-
-            <!-- <input class="title" type="text" placeholder="Take a Notes..." /> -->
-            <button class="btn">
-                <img class="img-tag" style="width: 27px;" src="../../../assets/googleKeep/pin.svg" alt="">
-            </button>
+            
         </div>
 
         <div *ngIf="show" fxLayoutAlign="center center" style="margin: 3px;" >

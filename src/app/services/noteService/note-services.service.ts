@@ -9,19 +9,30 @@ export class NoteServicesService {
   token:any;
 
 
-  constructor( private httpservice: HttpServiceService) {
-    this.token = localStorage.getItem(`token`)
+  constructor( private httpService: HttpServiceService) {
+    this.token = localStorage.getItem("token")
    }
 
-  createNote(reqdata:any){
+  //  getallNote()
+  // {
+  //   let header = {
+  //     headers:new HttpHeaders({
+  //       'Content-type':'application/json',
+  //       'Authorization':"Bearer "+this.token
+  //     })
+  //   }
+
+  //   return this.httpservice.GetService('https://localhost:44306/api/Notes/Read',true,header)
+  // }
+  createNote(reqdata:any, token:any){
     console.log(reqdata);
 
     let header = {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + this.token
+        'Content-type':'application/json',
+        'Authorization': 'Bearer ' + token
       }),
     };
-    return this.httpservice.postService(`/Notes/Create`,reqdata,true,header)
+    return this.httpService.postService('/Notes/Create',reqdata,true,header)
   }
 }
