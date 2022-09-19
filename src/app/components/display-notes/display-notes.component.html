@@ -1,19 +1,19 @@
-<div class="container">
-    <div class="display-container">
+<div class="container" >
+    <div class="display-container" *ngFor="let note of NotesArray">
         <div class="Note-container" fxLayout="row" >
-            <input class="title" type="text" placeholder="Take a Notes...">
-            <button class="btn" >
-                <img class="img-tag" style="width: 27px;" src="../../../assets/googleKeep/pin.svg" alt="">
-            </button>
+            <span class="title" type="text" placeholder="Take a Notes...">{{note.title}}</span>
+            <p class="btn" >
+                <img class="img-tag" style="width: 21px;" src="../../../assets/googleKeep/pin.svg" alt="">
+            </p>
             
         </div>
-        <div >
-            <p class="notes"></p>
+        <div>
+            <p class="notes">{{note.description}}</p>
         </div>
-
         <div class="display-icons">
             <app-icons ></app-icons>
         </div>
+
     </div>
 
 </div>

@@ -16,7 +16,14 @@
         <img width="21px" src="../../../assets/googleKeep/archive2.svg" alt="" srcset="">
     </div>
     <div class="icon" fxLayoutAlign="center center" fxFlex="15">
-        <img width="22px" src="../../../assets/googleKeep/3dot.svg" alt="" srcset="">
+        <img width="20px" src="../../../assets/googleKeep/option.svg" alt="" srcset="" [matMenuTriggerFor]="more">
+        <mat-menu #more="matMenu">
+            <button mat-menu-item (click)="delete()">Delete Note</button>
+            <button mat-menu-item>Add label</button>
+            <button mat-menu-item>Add drawing</button>
+            <button mat-menu-item>Make a copy</button>
+            <button mat-menu-item>Show checkboxes</button>
+          </mat-menu>
     </div>
     
     

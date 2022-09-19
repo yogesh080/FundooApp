@@ -13,6 +13,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 
 import { AppComponent } from './app.component';
@@ -26,6 +29,8 @@ import { CreateNotesComponent } from './components/create-notes/create-notes.com
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
 import { IconsComponent } from './components/icons/icons.component';
+import { MatButtonModule } from '@angular/material/button';
+import { TrashComponent } from './components/trash/trash.component';
 // import { MustMatch } from './components/registration/_helpers/must-match.validator';
 
 @NgModule({
@@ -39,7 +44,8 @@ import { IconsComponent } from './components/icons/icons.component';
     CreateNotesComponent,
     GetAllNotesComponent,
     DisplayNotesComponent,
-    IconsComponent
+    IconsComponent,
+    TrashComponent
     
   ],
   imports: [
@@ -56,7 +62,10 @@ import { IconsComponent } from './components/icons/icons.component';
     MatIconModule,
     MatListModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    MatCardModule,
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

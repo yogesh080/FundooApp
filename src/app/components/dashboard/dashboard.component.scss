@@ -7,6 +7,10 @@
   font-family: "Google Sans", "Noto Sans Myanmar UI", arial, sans-serif;
 }
 
+.mat-toolbar main-toolbar mat-toolbar-single-row[_ngcontent-mcd-c124]{
+height: 38px;
+}
+
 .header-btn {
   // color: rgb(95, 99, 104);
   display: flex;
@@ -17,7 +21,7 @@
 
 .mat-toolbar-row,
 .mat-toolbar-single-row {
-  height: 77px;
+  height: 65px;
   padding: 0px 33px;
 }
 
@@ -103,10 +107,6 @@
 
 }
 
-// *:focus {
-//   outline: none;
-// }
-
 
 button {
   border: none;
@@ -124,7 +124,7 @@ button {
   margin-left: 55px;
   // margin-right: -493px;
   width: 692px;
-  height: 54px;
+  height: 44px;
   border-radius: 8px;
 }
 
@@ -144,11 +144,12 @@ input{
 
 .tooltip input{
   border: none;
+  margin-bottom:2px;
   // border: 1px solid red;
   padding: 0px 12px;
   background:#f1f3f4;
   border-radius: 7px;
   width: 117%;
-  font-size:  19px;
-  height: 47px;
+  font-size:  18px;
+  height: 36px;
 }

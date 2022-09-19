@@ -6,33 +6,49 @@ import { HttpServiceService } from '../httpService/http-service.service';
   providedIn: 'root'
 })
 export class NoteServicesService {
-  token:any;
+  token: any;
 
 
-  constructor( private httpService: HttpServiceService) {
+  constructor(private httpService: HttpServiceService) {
     this.token = localStorage.getItem("token")
-   }
+  }
 
-  //  getallNote()
-  // {
-  //   let header = {
-  //     headers:new HttpHeaders({
-  //       'Content-type':'application/json',
-  //       'Authorization':"Bearer "+this.token
-  //     })
-  //   }
+  getallNote() {
 
-  //   return this.httpservice.GetService('https://localhost:44306/api/Notes/Read',true,header)
-  // }
-  // createNote(reqdata:any, token:any){
-  //   console.log(reqdata);
+    this.token = localStorage.getItem('token')
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': "Bearer " + this.token
+      })
+    }
 
-  //   let header = {
-  //     headers: new HttpHeaders({
-  //       'Content-type':'application/json',
-  //       'Authorization': 'Bearer ' + token
-  //     }),
-  //   };
-  //   return this.httpService.postService('/Notes/Create',reqdata,true,header)
-  // }
+    return this.httpService.GetService('/Notes/Read', true, header)
+  }
+
+  createNote(reqdata: any) {
+    console.log(reqdata);
+
+    let header = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      }),
+    };
+    return this.httpService.postService('/Notes/Create', reqdata, true, header)
+  }
+
+  
+  DeleteNote(NoteID:any){
+    
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':'Bearer '+ this.token
+      })
+    }
+
+    return this.httpService.deleteservices(`Notes/Delete?NoteID=${NoteID}`,true,header); 
+
+  }
 }

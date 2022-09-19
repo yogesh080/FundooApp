@@ -71,16 +71,4 @@ export class UserServiceService {
     return this.httpService.postService(`/User/ResetLink?password=${reqdata.Password}&confirmPassword=${reqdata.confirmPassword}`,{},true,header)
   }
 
-  createNote(reqdata:any, token:any){
-    console.log(reqdata);
-
-    let header = {
-      headers: new HttpHeaders({
-        'Content-type':'application/json',
-        'Authorization': 'Bearer ' + token
-      }),
-    };
-    return this.httpService.postService('/Notes/Create',reqdata,true,header)
-  }
-
 }

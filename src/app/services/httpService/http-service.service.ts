@@ -12,18 +12,21 @@ export class HttpServiceService {
   constructor(private httpClient: HttpClient) { }
 
 
+  GetService(url:string, token: boolean=false, httpOptions:any)
+  {
+      return this.httpClient.get(this.baseUrl+url,token && httpOptions);
+  }
+
   postService(url: string, reqdata: any, token: boolean =false, httpOptions: any={}){
     return this.httpClient.post(this.baseUrl+url, reqdata, token && httpOptions)
   }
 
-  GetService(url:string, token: boolean=false, httpOptions:any)
-  {
-      return this.httpClient.get(url,token && httpOptions);
+  putservices(url: string, reqdata: any, token: boolean = false, httpOptions: any = {}) {
+    return this.httpClient.put(this.baseUrl + url, reqdata, token && httpOptions);
   }
 
-  
-  // putservices(url: string, reqdata: any, token: boolean = false, httpOptions: any = {}) {
-  //   return this.httpClient.put(this.baseUrl + url, reqdata, token && httpOptions);
-  // }
+  deleteservices(url:string, token:boolean=false, httpOptions:any){
+    return this.httpClient.delete(this.baseUrl+url, token && httpOptions)
+  }
   
 }
