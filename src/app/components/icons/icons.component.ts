@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NoteServicesService } from 'src/app/services/noteService/note-services.service';
+import { TrashComponent } from '../trash/trash.component';
 
 @Component({
   selector: 'app-icons',
@@ -17,9 +18,9 @@ export class IconsComponent implements OnInit {
   }
 
   delete(){
-    console.log(this.NotesArray.NoteID);
+    console.log(this.NotesArray.notesId);
     
-    this.note.DeleteNote(this.NotesArray.NoteID).subscribe((response:any) => {
+    this.note.DeleteNote(this.NotesArray.notesId).subscribe((response:any) => {
       console.log("Note Deleted Successfully", response.data);
     }, (error: any) => {
       console.log(error);
