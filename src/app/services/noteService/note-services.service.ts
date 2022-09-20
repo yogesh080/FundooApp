@@ -51,4 +51,17 @@ export class NoteServicesService {
     return this.httpService.deleteservices(`Notes/Delete?NoteID=${NoteID}`,true,header); 
 
   }
+
+  updateNote(updatedata:any, NoteID:any)
+  {
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':"Bearer "+this.token
+      })
+    }
+// User/ResetLink?password=user1234&confirmPassword=user1234
+//api/Notes/Update?NoteID=5
+    return this.httpService.putservices(`Notes/Update?NoteID=${NoteID}`,updatedata,true,header);
+  }
 }

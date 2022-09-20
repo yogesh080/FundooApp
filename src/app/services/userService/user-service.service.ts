@@ -67,6 +67,7 @@ export class UserServiceService {
       })
     }
     console.log(reqdata);
+// User/ResetLink?password=user1234&confirmPassword=user1234
 
     return this.httpService.postService(`/User/ResetLink?password=${reqdata.Password}&confirmPassword=${reqdata.confirmPassword}`,{},true,header)
   }
