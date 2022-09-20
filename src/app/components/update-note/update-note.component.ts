@@ -8,10 +8,9 @@ import { NoteServicesService } from 'src/app/services/noteService/note-services.
   styleUrls: ['./update-note.component.scss']
 })
 export class UpdateNoteComponent implements OnInit {
-
+  NoteID:any;
   title:any;
   description:any
-  submitted = false;
 
   constructor( @Inject(MAT_DIALOG_DATA) public data: any,
     private note:NoteServicesService) { }
@@ -20,22 +19,25 @@ export class UpdateNoteComponent implements OnInit {
     console.log(this.data);
     this.title=this.data.title,
     this.description=this.data.description
+    this.NoteID=this.data.notesId
+    console.log(this.NoteID)
     
   }
 
   onSubmit(){
-    this.submitted=true;
 
     let updatedata= {
-
+      NotesId:this.NoteID,
       Title: this.title,
       Description: this.description
+      
     
     }
+    console.log("cool")
     console.log(updatedata)
 
     this.note.updateNote(updatedata, this.data.notesId
-      ).subscribe((response) => {
+      ).subscribe((response:any) => {
       console.log("Update response", response)
     }, (error:any) => {
       console.log(error)

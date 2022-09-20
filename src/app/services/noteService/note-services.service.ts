@@ -48,11 +48,11 @@ export class NoteServicesService {
       })
     }
 
-    return this.httpService.deleteservices(`Notes/Delete?NoteID=${NoteID}`,true,header); 
+    return this.httpService.deleteservices(`/Notes/Delete?NoteID=${NoteID}`,true,header); 
 
   }
 
-  updateNote(updatedata:any, NoteID:any)
+  updateNote(reqdata:any, NoteID:any)
   {
     let header = {
       headers:new HttpHeaders({
@@ -60,8 +60,7 @@ export class NoteServicesService {
         'Authorization':"Bearer "+this.token
       })
     }
-// User/ResetLink?password=user1234&confirmPassword=user1234
-//api/Notes/Update?NoteID=5
-    return this.httpService.putservices(`Notes/Update?NoteID=${NoteID}`,updatedata,true,header);
+
+    return this.httpService.putservices(`/Notes/Update?NoteID=${NoteID}`,reqdata,true,header);
   }
 }
