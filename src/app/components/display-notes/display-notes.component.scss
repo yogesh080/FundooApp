@@ -23,12 +23,15 @@
   margin-top: 20px;
   font-size: 20px;
   justify-content: space-between;
+  margin-bottom: 0px;
+  height: 30px;
+  
 }
 
 .description {
   overflow-wrap: break-word;
   font-size: 15px;
-  padding-top: 10px;
+  // padding-top: 10px;
   min-height: 35px;
   margin-bottom: 0px;
 }
@@ -40,4 +43,10 @@
   &:hover {
     background-color: rgb(169 145 145 / 16%);
   }
+}
+
+span{
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }

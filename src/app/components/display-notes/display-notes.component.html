@@ -1,8 +1,10 @@
 <div class="display-container ">
     <div *ngFor="let note of NotesArray" >
         <mat-card class="note ">
-            <mat-card-title class="title" fxLayout="row" >
+            <mat-card-title class="title" fxLayout="row" (click)="openDialog(note)" >
+            <span>
                 {{note.title}}
+            </span>
                 <p class="btn" fxLayoutAlign="space-evenly center" >
                     <img class="img-tag" style="width: 21px;" src="../../../assets/googleKeep/pin.svg" alt="">
                 </p>    
