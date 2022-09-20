@@ -1,10 +1,38 @@
-<mat-card-title>
-    <input matInput class="note-title">
+<mat-card-title class="title">
+    <div fxLayout="row" >
+        <input  matInput class="note-title" [(ngModel)]="title">
+        <img class="img-tag" style="width: 21px;" src="../../../assets/googleKeep/pin.svg" alt="">
+    </div>
+
 </mat-card-title>
-<mat-card-content>
-    <input matInput class="note-description">
+<mat-card-content class="description">
+    <input  matInput class="note-description" [(ngModel)]="description">
 </mat-card-content>
-<mat-card-footer>
+<div>
+<mat-card-footer fxLayout="row">
     <app-icons></app-icons>
-    <button mat-button matTooltip="Close" mat-dialog-close class="close-card">Close</button>
+    <button  mat-button matTooltip="Close" mat-dialog-close class="close-card" (click)="onSubmit()">Close</button>
 </mat-card-footer>
+</div>
+
+        <!-- <mat-card class="note ">
+            <mat-card-title class="title" fxLayout="row"  >
+                title
+                <p class="btn" >
+                    <img class="img-tag" style="width: 21px;" src="../../../assets/googleKeep/pin.svg" alt="">
+                </p>    
+            </mat-card-title>
+            <mat-card-content class="description" >
+                <p>description</p>
+            </mat-card-content>
+            
+            
+            <mat-card-actions>
+                <div class="icons" fxLayout="row" >
+                    <app-icons ></app-icons>
+                    <button mat-button matTooltip="Close" mat-dialog-close class="close-card">Close</button>
+                </div>
+            </mat-card-actions>
+        </mat-card> -->
+    
+

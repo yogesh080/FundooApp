@@ -13,7 +13,7 @@ export class DisplayNotesComponent implements OnInit {
 
 
   
-  constructor( public dialog: MatDialog ) { }
+  constructor( public dialog: MatDialog) { }
 
   ngOnInit(): void {
     console.log("Get all notes", this.NotesArray);
@@ -22,9 +22,6 @@ export class DisplayNotesComponent implements OnInit {
 
   openDialog(note:any) {
     this.dialog.open(UpdateNoteComponent,{
-      width: '45%',
-      height: 'auto',
-      autoFocus:false,
       data:note,
     });
   }
