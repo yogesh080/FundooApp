@@ -1,4 +1,31 @@
-<div class="container" >
+<div class="display-note row">
+    <div *ngFor="let note of NotesArray" >
+        <mat-card class="note-card ">
+            <mat-card-title class="note-title" >
+                {{note.title}}
+            </mat-card-title>
+            <mat-card-content class="note-description" >
+                <p>{{note.description}}</p>
+            </mat-card-content>
+            
+            
+            <mat-card-actions>
+                <div class="icons">
+                    <app-icons ></app-icons>
+                </div>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- <div class="container" >
     <div class="display-container" *ngFor="let note of NotesArray">
         <div class="Note-container" fxLayout="row" >
             <span class="title" type="text" placeholder="Take a Notes...">{{note.title}}</span>
@@ -16,4 +43,4 @@
 
     </div>
 
-</div>
+</div> -->
