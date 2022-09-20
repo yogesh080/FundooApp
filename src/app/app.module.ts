@@ -31,6 +31,7 @@ import { DisplayNotesComponent } from './components/display-notes/display-notes.
 import { IconsComponent } from './components/icons/icons.component';
 import { MatButtonModule } from '@angular/material/button';
 import { TrashComponent } from './components/trash/trash.component';
+import { UpdateNoteComponent } from './components/update-note/update-note.component';
 // import { MustMatch } from './components/registration/_helpers/must-match.validator';
 
 @NgModule({
@@ -45,7 +46,8 @@ import { TrashComponent } from './components/trash/trash.component';
     GetAllNotesComponent,
     DisplayNotesComponent,
     IconsComponent,
-    TrashComponent
+    TrashComponent,
+    UpdateNoteComponent
     
   ],
   imports: [

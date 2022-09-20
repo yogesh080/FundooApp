@@ -1,4 +1,60 @@
-// .container{
+
+
+.display-container{
+    display: flex;
+    flex-flow: wrap;
+    position: absolute;
+    left: 10%;
+    width: 85%;
+    column-gap: 44px;
+    margin-top: 14px;
+  
+  }
+  
+  .note {
+     overflow-wrap: break-word;
+     width: 200px;
+     height: auto;
+     min-height: 80px;
+     margin-top: 20px;
+     padding: 12px;
+  }
+  
+  .title{
+    overflow-wrap: break-word;
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  
+  .description{
+    overflow-wrap: break-word;
+    font-size: 15px;
+    padding-top: 10px;
+    min-height: 35px;
+    margin-bottom: 0px;
+}
+
+.btn{
+    margin-left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // .container{
 //     padding: 22px 38px;
 //     border: none;
 //     // border: 2px solid red;
@@ -68,37 +124,3 @@
 //     // border: 2px solid rgb(0, 255, 13);
 
 //    }
-
-.display-note{
-    display: flex;
-    flex-flow: wrap;
-    position: absolute;
-    left: 10%;
-    width: 85%;
-    column-gap: 15px;
-    margin-top: 14px;
-  
-  }
-  
-  .note-card {
-     overflow-wrap: break-word;
-     width: 200px;
-     height: auto;
-     min-height: 80px;
-     margin-top: 20px;
-     padding: 12px;
-  }
-  
-  .note-title{
-    overflow-wrap: break-word;
-    margin-top: 20px;
-    font-size: 20px;
-  }
-  
-  .note-description{
-    overflow-wrap: break-word;
-    font-size: 15px;
-    padding-top: 10px;
-    min-height: 35px;
-    margin-bottom: 0px;
-  }
