@@ -1,7 +1,7 @@
 <div class="display-container ">
     <div *ngFor="let note of NotesArray" >
         <mat-card class="note ">
-            <mat-card-title class="title" fxLayout="row" >
+            <mat-card-title class="title" fxLayout="row" (click)="openDialog(note)" >
                 {{note.title}}
                 <p class="btn" >
                     <img class="img-tag" style="width: 21px;" src="../../../assets/googleKeep/pin.svg" alt="">
