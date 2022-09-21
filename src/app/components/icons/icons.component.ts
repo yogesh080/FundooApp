@@ -9,18 +9,21 @@ import { TrashComponent } from '../trash/trash.component';
 })
 export class IconsComponent implements OnInit {
 
-  @Input() NotesArray: any;
-
+  @Input() NotesList:any;
+  
 
   constructor(private note:NoteServicesService) { }
 
   ngOnInit(): void {
+
+    console.log("Note list in icon: " + this.NotesList);
+
   }
 
   delete(){
-    console.log(this.NotesArray.notesId);
+    console.log(this.NotesList.notesId);
     
-    this.note.DeleteNote(this.NotesArray.notesId).subscribe((response:any) => {
+    this.note.DeleteNote(this.NotesList.notesId).subscribe((response:any) => {
       console.log("Note Deleted Successfully", response.data);
     }, (error: any) => {
       console.log(error);

@@ -12,6 +12,7 @@ export class DisplayNotesComponent implements OnInit {
   @Input() NotesArray: any;
 
 
+
   
   constructor( public dialog: MatDialog) { }
 

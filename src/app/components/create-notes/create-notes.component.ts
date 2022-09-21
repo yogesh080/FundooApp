@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NoteServicesService } from 'src/app/services/noteService/note-services.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 
 
 

@@ -20,7 +20,7 @@ export class UpdateNoteComponent implements OnInit {
     this.title=this.data.title,
     this.description=this.data.description
     this.NoteID=this.data.notesId
-    console.log(this.NoteID)
+    console.log("NoteId: "+this.NoteID)
     
   }
 
@@ -33,7 +33,6 @@ export class UpdateNoteComponent implements OnInit {
       
     
     }
-    console.log("cool")
     console.log(updatedata)
 
     this.note.updateNote(updatedata, this.data.notesId

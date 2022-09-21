@@ -5,7 +5,7 @@
             <span>
                 {{note.title}}
             </span>
-                <p class="btn" fxLayoutAlign="space-evenly center" >
+                <p class="btn" fxLayoutAlign="space-evenly center"  >
                     <img class="img-tag" style="width: 21px;" src="../../../assets/googleKeep/pin.svg" alt="">
                 </p>    
             </mat-card-title>
@@ -16,9 +16,13 @@
             
             <mat-card-actions>
                 <div class="icons">
-                    <app-icons ></app-icons>
+                    <app-icons [NotesList]="note"></app-icons>
                 </div>
             </mat-card-actions>
+
+            <!-- <div>
+                {{note.notesId}}
+            </div> -->
         </mat-card>
     </div>
 </div>
