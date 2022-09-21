@@ -24,7 +24,7 @@ export class IconsComponent implements OnInit {
     console.log(this.NotesList.notesId);
     
     this.note.DeleteNote(this.NotesList.notesId).subscribe((response:any) => {
-      console.log("Note Deleted Successfully", response.data);
+      console.log("Note Deleted Successfully", response);
     }, (error: any) => {
       console.log(error);
     })

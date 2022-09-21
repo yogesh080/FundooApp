@@ -21,11 +21,9 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group({   
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
-    }
-    // , {
-    //   validator: MustMatch('password', 'confirmPassword')
-    // }
-    );
+
+  });
+
   }
 
   // convenience getter for easy access to form fields
@@ -43,6 +41,7 @@ export class LoginComponent implements OnInit {
       this.user.login(reqdata).subscribe((response:any) => {
         console.log(response)
         localStorage.setItem("token",response.data);
+
         this.router.navigateByUrl("dashboard/note");
 
       }, error => {
@@ -51,12 +50,6 @@ export class LoginComponent implements OnInit {
       )
     }
 
-    // display form values on success
-    // alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
   }
 
-  // onReset() {
-  //   this.submitted = false;
-  //   this.registerForm.reset();
-  // }
 }

@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
+import { AuthguardServicesService } from './services/authService/authguard-services.service';
 
 
 
@@ -48,7 +49,7 @@ import { UpdateNoteComponent } from './components/update-note/update-note.compon
     DisplayNotesComponent,
     IconsComponent,
     TrashComponent,
-    UpdateNoteComponent
+    UpdateNoteComponent,
     
   ],
   imports: [
@@ -71,7 +72,7 @@ import { UpdateNoteComponent } from './components/update-note/update-note.compon
     MatMenuModule,
     MatDialogModule
   ],
-  providers: [],
+  providers: [ AuthguardServicesService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
