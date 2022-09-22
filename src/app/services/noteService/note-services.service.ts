@@ -63,4 +63,26 @@ export class NoteServicesService {
 
     return this.httpService.putservices(`/Notes/Update?NoteID=${NoteID}`,reqdata,true,header);
   }
+
+  TrashNote(noteId:any){
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':"Bearer "+this.token
+      })
+    }
+
+    return this.httpService.putservices(`/Notes/Trash?noteId=${noteId}`,{} ,true,header)
+  }
+
+  ArchiveNote(noteId:any){
+    let header = {
+      headers:new HttpHeaders({
+        'Content-type':'application/json',
+        'Authorization':"Bearer "+this.token
+      })
+    }
+
+    return this.httpService.putservices(`/Notes/Archive?noteId=${noteId}`,{} ,true,header)
+  }
 }

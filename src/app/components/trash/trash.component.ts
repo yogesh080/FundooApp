@@ -8,9 +8,9 @@ import { NoteServicesService } from 'src/app/services/noteService/note-services.
 })
 export class TrashComponent implements OnInit {
 
-  trashNotes :any;
 
-  @Input() NotesArray:any;
+  // @Input() NotesArray:any;
+  notedata=[];
 
   constructor(private note: NoteServicesService) { }
 
@@ -20,11 +20,11 @@ export class TrashComponent implements OnInit {
 
   getAllNoteTrash(){
     console.log("Note for trash")
-    this.note.getallNote().subscribe((request: any) => {
-      console.log("request data", request)
-      this.trashNotes = request.data
+    this.note.getallNote().subscribe((response: any) => {
+      console.log("request data from bin", response)
+      this.notedata = response.data
 
-      console.log(this.trashNotes)
+      console.log(this.notedata)
     })
   }
 

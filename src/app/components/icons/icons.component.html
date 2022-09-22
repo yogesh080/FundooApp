@@ -12,13 +12,13 @@
         <img width="21px" src="../../../assets/googleKeep/gallary.svg" alt="" srcset="">
     </div >
 
-    <div class="icon" fxLayoutAlign="center center" fxFlex="15">
+    <div class="icon" (click)="Archive()"  fxLayoutAlign="center center" fxFlex="15">
         <img width="21px" src="../../../assets/googleKeep/archive2.svg" alt="" srcset="">
     </div>
     <div class="icon" fxLayoutAlign="center center" fxFlex="15">
         <img width="20px" src="../../../assets/googleKeep/option.svg" alt="" srcset="" [matMenuTriggerFor]="more">
         <mat-menu #more="matMenu">
-            <button mat-menu-item (click)="delete()">Delete Note</button>
+            <button mat-menu-item (click)="Trash()">Delete Note</button>
             <button mat-menu-item>Add label</button>
             <button mat-menu-item>Add drawing</button>
             <button mat-menu-item>Make a copy</button>

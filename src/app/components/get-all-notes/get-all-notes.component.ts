@@ -26,6 +26,10 @@ export class GetAllNotesComponent implements OnInit {
 
         console.log(this.NoteList)
 
+        this.NoteList = this.NoteList.filter((object:any)=>{
+          return object.trash === false && object.archive === false
+        })
+
       })
 
     }

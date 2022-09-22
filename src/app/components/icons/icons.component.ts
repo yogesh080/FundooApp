@@ -20,11 +20,22 @@ export class IconsComponent implements OnInit {
 
   }
 
-  delete(){
+  Trash(){
     console.log(this.NotesList.notesId);
     
-    this.note.DeleteNote(this.NotesList.notesId).subscribe((response:any) => {
-      console.log("Note Deleted Successfully", response);
+    this.note.TrashNote(this.NotesList.notesId).subscribe((response:any) => {
+      console.log("Note Trash Successfully", response);
+    }, (error: any) => {
+      console.log(error);
+    })
+  
+  }
+
+  Archive(){
+    console.log(this.NotesList.notesId);
+    
+    this.note.ArchiveNote(this.NotesList.notesId).subscribe((response:any) => {
+      console.log("Note Archived Successfully", response);
     }, (error: any) => {
       console.log(error);
     })

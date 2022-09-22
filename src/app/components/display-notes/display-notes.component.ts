@@ -9,6 +9,7 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
 })
 export class DisplayNotesComponent implements OnInit {
 
+ 
   @Input() NotesArray: any;
 
 

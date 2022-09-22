@@ -8,6 +8,7 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 import { AuthenticationGuard } from './components/AuthGuard/authentication.guard';
+import { TrashComponent } from './components/trash/trash.component';
 
 const routes: Routes = [
   { path: 'registration', component: RegistrationComponent },
@@ -19,6 +20,8 @@ const routes: Routes = [
   { path: 'forgetpassword', component: ForgetPasswordComponent },
   { path: 'User/ResetPassword/:token', component: EmailComponent },
 
+  // {path:'bin', component:TrashComponent },
+
   {
     path: 'dashboard',
     component: DashboardComponent,
@@ -26,6 +29,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: '/dashboard/note', pathMatch: 'full' },
       { path: 'note', component: GetAllNotesComponent },
+      {path:'bin', component:TrashComponent}
     ],
   },
 ];
