@@ -5,9 +5,22 @@
     <div class="icon" fxLayoutAlign="center center" fxFlex="15">
         <img width="21px" src="../../../assets/googleKeep/collab.svg" alt="" srcset="">
     </div>
-    <div class="icon" fxLayoutAlign="center center" fxFlex="15">
+
+
+    <div class="icon" fxLayoutAlign="center center" fxFlex="15" [matMenuTriggerFor]="colorMenu" >
         <img width="21px" src="../../../assets/googleKeep/color.svg" alt="" srcset="">
+        <mat-menu #colorMenu="matMenu">
+            <div class="popup">
+
+                <div *ngFor="let color of Allcolors" class="colorButton">
+                    <button mat-mini-fab [style.background]="color.code" id="colorbuttons"
+                        (click)="Color(color)"></button>
+                </div>
+            </div>
+        </mat-menu>
     </div>
+
+
     <div class="icon" fxLayoutAlign="center center" fxFlex="15">
         <img width="21px" src="../../../assets/googleKeep/gallary.svg" alt="" srcset="">
     </div >

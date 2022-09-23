@@ -9,7 +9,8 @@ export class NoteServicesService {
   token: any;
 
 
-  constructor(private httpService: HttpServiceService) {
+
+  constructor(private httpService: HttpServiceService ) {
     this.token = localStorage.getItem("token")
   }
 
@@ -84,5 +85,22 @@ export class NoteServicesService {
     }
 
     return this.httpService.putservices(`/Notes/Archive?noteId=${noteId}`,{} ,true,header)
+  }
+
+  AddColor(NoteID:any,color:any){
+
+    console.log("color====>", NoteID, color.code)
+    let header = {
+      headers: new HttpHeaders({
+
+        'Content-type':'application/json',
+        'Authorization':"Bearer "+this.token
+
+      })
+      // Notes/Color?NoteID=2&color=%23ffffff
+      // /ResetLink?password=user1234&confirmPassword=user1234
+
+    }
+    return this.httpService.putservices(`Notes/Color?NoteID=${NoteID}&color=%${color.code}`,{}, true, header)
   }
 }
