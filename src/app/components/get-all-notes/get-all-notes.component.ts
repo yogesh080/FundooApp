@@ -33,6 +33,10 @@ export class GetAllNotesComponent implements OnInit {
       })
 
     }
+
+    colorMessage(event:any){
+      this.getAllNotes();
+    }
   }
 
 

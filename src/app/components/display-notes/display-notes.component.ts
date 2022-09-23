@@ -13,6 +13,9 @@ export class DisplayNotesComponent implements OnInit {
   @Input() NotesArray: any;
 
 
+  @Output() ColorEvent = new EventEmitter<string>();
+
+
 
   
   constructor( public dialog: MatDialog) { }
@@ -26,6 +29,10 @@ export class DisplayNotesComponent implements OnInit {
     this.dialog.open(UpdateNoteComponent,{
       data:note,
     });
+  }
+
+  colorMessage(event: any){
+    this.ColorEvent.emit("color changed reloaded");
   }
 
 

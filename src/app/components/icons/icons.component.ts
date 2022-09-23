@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NoteServicesService } from 'src/app/services/noteService/note-services.service';
 import { TrashComponent } from '../trash/trash.component';
 
@@ -10,6 +10,9 @@ import { TrashComponent } from '../trash/trash.component';
 export class IconsComponent implements OnInit {
 
   @Input() NotesList:any;
+
+
+  @Output() ColorEvent = new EventEmitter<string>();
 
 
 
@@ -53,10 +56,15 @@ export class IconsComponent implements OnInit {
     
     this.note.AddColor(this.NotesList.notesId, color).subscribe((response:any) => {
       console.log("color changed Successfully", response);
+      this.ColorEvent.emit(response);
     }, (error: any) => {
       console.log(error);
     })
 
   }
+
+  // sendMessage() {
+  //   this.ColorEvent.emit("halla madrid")
+  // }
 
 }
