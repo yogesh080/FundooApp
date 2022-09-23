@@ -98,6 +98,7 @@ export class NoteServicesService {
 
       })
       
+      //Color?NoteID=22&color=white
 
     }
     console.log("cool",color)
