@@ -48,7 +48,8 @@ export class IconsComponent implements OnInit {
   }
 
   Color(color:any){
-    console.log("hello", this.NotesList.color);
+    console.log("hello====>", color);
+
     
     this.note.AddColor(this.NotesList.notesId, color).subscribe((response:any) => {
       console.log("color changed Successfully", response);

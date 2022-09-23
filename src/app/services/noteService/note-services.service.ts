@@ -89,7 +89,7 @@ export class NoteServicesService {
 
   AddColor(NoteID:any,color:any){
 
-    console.log("color====>", NoteID, color.code)
+    console.log("color====>", NoteID, color)
     let header = {
       headers: new HttpHeaders({
 
@@ -97,10 +97,10 @@ export class NoteServicesService {
         'Authorization':"Bearer "+this.token
 
       })
-      // Notes/Color?NoteID=2&color=%23ffffff
-      // /ResetLink?password=user1234&confirmPassword=user1234
+      
 
     }
-    return this.httpService.putservices(`Notes/Color?NoteID=${NoteID}&color=%${color.code}`,{}, true, header)
+    console.log("cool",color)
+    return this.httpService.putservices(`/Notes/Color?NoteID=${NoteID}&color=${color}`,{}, true, header)
   }
 }
