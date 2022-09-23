@@ -5,12 +5,12 @@
         </button>
         <img style="width:42px; padding:10px;" src="../../../assets/googleKeep/noteLogo.png" alt="" srcset="">
         <h1 class="h1">NotesKeep</h1>
-        <div class="search-area" >
-            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2px" class="tooltip" >
-               <img style="width: 24px; padding-left: 19px; height: 45px;"
-                        src="../../../assets/googleKeep/searchsvg.svg" />
-                <input  type="text" placeholder="Search" />
-            
+        <div class="search-area">
+            <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2px" class="tooltip">
+                <img style="width: 24px; padding-left: 19px; height: 45px;"
+                    src="../../../assets/googleKeep/searchsvg.svg" />
+                <input type="text" placeholder="Search" />
+
             </div>
         </div>
 
@@ -34,35 +34,38 @@
                 <img style="width: 27px;" src="../../../assets/googleKeep/image.png" />
             </button>
         </div>
-        
+
     </mat-toolbar>
 
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
         <mat-sidenav class="side-nav" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
             [fixedInViewport]="mobileQuery.matches" fixedTopGap="56">
             <mat-nav-list class="menu-items">
-                <a mat-list-item class="menus"><img class="sidenav-icon" src="../../../assets/googleKeep/Notes.svg"
+                <a mat-list-item class="menus" [routerLink]="['./note']" ><img class="sidenav-icon" src="../../../assets/googleKeep/Notes.svg"
                         alt="">Notes</a>
                 <a mat-list-item class="menus"> <img class="sidenav-icon" src="../../../assets/googleKeep/remainder.svg"
                         alt="">Reminders</a>
                 <a mat-list-item class="menus"> <img class="sidenav-icon" src="../../../assets/googleKeep/edit.svg"
                         alt="">Edit labels</a>
-                <a mat-list-item class="menus"> <img class="sidenav-icon" src="../../../assets/googleKeep/archive.svg"
-                        alt="">Archive</a>
-                <a mat-list-item class="menus" [routerLink]="['bin']"> <img class="sidenav-icon" src="../../../assets/googleKeep/bin.svg"
-                        alt="">Bin</a>
+                <a mat-list-item class="menus" [routerLink]="['./archive']"> <img class="sidenav-icon" src="../../../assets/googleKeep/archive.svg"
+                        alt="" [routerLink]="['./archive']" >Archive</a>
+                <a mat-list-item class="menus" [routerLink]="['./bin']"> <img class="sidenav-icon"
+                        src="../../../assets/googleKeep/bin.svg" alt="">Bin</a>
 
             </mat-nav-list>
         </mat-sidenav>
 
         <mat-sidenav-content>
-            <div style="height:100vh; background-color: white;" >
-                <div>
-                    <app-get-all-notes></app-get-all-notes>
-                </div>
+
+
+            <div style="height:100vh; background-color: white;">
+                <router-outlet>
+
+                </router-outlet>
+
             </div>
         </mat-sidenav-content>
     </mat-sidenav-container>
-    
-    
+
+
 </div>
