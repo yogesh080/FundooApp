@@ -38,5 +38,12 @@
         </mat-menu>
     </div>
 
+    <div fxLayout="row">
+        <button mat-icon-button matTooltip="Delete Forever">
+                <img src="../../../assets/googleKeep/delete_forever_FILL0_wght400_GRAD0_opsz48.svg" width="20px" height="20px"></button>
+        <button mat-icon-button matTooltip="Restore" (click)="Trash()"> 
+                <img src="../../../assets/googleKeep/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg" (click)="Delete()" width="20px" height="20px"></button>
+    </div>
+
 
 </div>

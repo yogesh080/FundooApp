@@ -37,6 +37,13 @@ export class GetAllNotesComponent implements OnInit {
     colorMessage(event:any){
       this.getAllNotes();
     }
+
+    trashMessage(event:any){
+      this.getAllNotes();
+    }
+    archiveMessage(event:any){
+      this.getAllNotes();
+    }
   }
 
 

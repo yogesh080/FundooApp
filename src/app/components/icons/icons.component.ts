@@ -13,11 +13,13 @@ export class IconsComponent implements OnInit {
 
 
   @Output() ColorEvent = new EventEmitter<string>();
+  @Output() TrashEvent = new EventEmitter<string>();
+  @Output() ArchiveEvent = new EventEmitter<string>();
 
 
 
-  Allcolors = [{code:"#ffffff", name:"White"},{code:"#FF6347", name:"Orange"},{code:"#FF4500", name:"Red"},{code:"#FFFF00", name:"Yellow"},{code:"#ADFF2F", name:"Green"},{code:"#43C6DB", name:"Blue"},
-  {code:"#728FCE", name:"Teal"},{code:"#2B65EC", name:"DarkBlue"},{code:"#D16587", name:"Purple"},{code:"#F9A7B0", name:"Pink"},{code:"#E2A76F", name:"Brown"},{code:"#D3D3D3", name:"Gray"}];
+  Allcolors = [{code:"#FF6347", name:"Orange"},{code:"#FF4500", name:"Red"},{code:"#FFFF00", name:"Yellow"},{code:"#ADFF2F", name:"Green"},{code:"#43C6DB", name:"Blue"},
+  {code:"#728FCE", name:"Teal"},{code:"#D16587", name:"Purple"},{code:"#ffffff", name:"White"}];
   
 
   constructor(private note:NoteServicesService) { }
@@ -28,11 +30,23 @@ export class IconsComponent implements OnInit {
 
   }
 
+
+  Delete(){
+    console.log(this.NotesList.notesId)
+
+    this.note.DeleteNote(this.NotesList.notesId).subscribe((response)=> {
+      console.log("Note Deleted Succesfully", response);
+    }, (error: any) => {
+      console.log(error);
+    })
+  }
+
   Trash(){
     console.log(this.NotesList.notesId);
     
     this.note.TrashNote(this.NotesList.notesId).subscribe((response:any) => {
       console.log("Note Trash Successfully", response);
+      this.TrashEvent.emit(response);
     }, (error: any) => {
       console.log(error);
     })
@@ -44,6 +58,7 @@ export class IconsComponent implements OnInit {
     
     this.note.ArchiveNote(this.NotesList.notesId).subscribe((response:any) => {
       console.log("Note Archived Successfully", response);
+      this.ArchiveEvent.emit(response)
     }, (error: any) => {
       console.log(error);
     })

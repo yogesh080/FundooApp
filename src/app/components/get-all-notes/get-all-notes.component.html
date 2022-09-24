@@ -1,2 +1,2 @@
 <app-create-notes></app-create-notes>
-<app-display-notes [NotesArray]="NoteList" (ColorEvent)="colorMessage($event)"></app-display-notes>
+<app-display-notes [NotesArray]="NoteList" (ColorEvent)="colorMessage($event)" (TrashEvent)="trashMessage($event)" (ArchiveEvent)="archiveMessage($event)"></app-display-notes>

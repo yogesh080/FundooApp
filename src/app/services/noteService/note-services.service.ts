@@ -97,8 +97,6 @@ export class NoteServicesService {
         'Authorization':"Bearer "+this.token
 
       })
-      
-      //Color?NoteID=22&color=white
 
     }
     console.log("cool",color)

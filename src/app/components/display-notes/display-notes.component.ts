@@ -14,6 +14,9 @@ export class DisplayNotesComponent implements OnInit {
 
 
   @Output() ColorEvent = new EventEmitter<string>();
+  @Output() TrashEvent = new EventEmitter<string>();
+  @Output() ArchiveEvent = new EventEmitter<string>();
+
 
 
 
@@ -33,6 +36,14 @@ export class DisplayNotesComponent implements OnInit {
 
   colorMessage(event: any){
     this.ColorEvent.emit("color changed reloaded");
+  }
+
+  trashMessage(event:any){
+    this.TrashEvent.emit("Reload Page after trash")
+  }
+
+  archiveMessage(event:any){
+    this.ArchiveEvent.emit("reload done archive")
   }
 
 
