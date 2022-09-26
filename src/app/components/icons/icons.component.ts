@@ -38,20 +38,20 @@ export class IconsComponent implements OnInit {
   ngOnInit(): void {
 
 
-    let Comp = this.route.snapshot.component;
+    let Component = this.route.snapshot.component;
 
 
-    if(Comp == GetAllNotesComponent)
+    if(Component == GetAllNotesComponent)
     {
       this.isDisplaynoteComponent=true;
     }
 
-    if(Comp == TrashComponent)
+    if(Component == TrashComponent)
     {
       this.isTrashComponent=true;
     }
 
-    if(Comp == ArchiveComponent)
+    if(Component == ArchiveComponent)
     {
       this.isArchiveComponent=true;
     }
