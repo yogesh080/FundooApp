@@ -30,8 +30,11 @@
             <button mat-icon-button class="header-icon">
                 <img style="width: 27px;" src="../../../assets/googleKeep/menu.svg" />
             </button>
-            <button mat-icon-button class="header-icon">
+            <button mat-icon-button class="header-icon" [matMenuTriggerFor]="more">
                 <img style="width: 27px;" src="../../../assets/googleKeep/image.png" />
+                <mat-menu #more="matMenu">
+                    <button mat-menu-item (click)="logout()" >Log Out</button>
+                </mat-menu>
             </button>
         </div>
 

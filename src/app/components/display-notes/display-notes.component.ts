@@ -31,10 +31,11 @@ export class DisplayNotesComponent implements OnInit {
 
   ngOnInit(): void {
     this.dataservice.currentMessage.subscribe(message => {
-      console.log(message)
+      console.log("display====>",message)
       this.Search = message
-
       
+
+
     })
     console.log("Get all notes", this.NotesArray);
   }
