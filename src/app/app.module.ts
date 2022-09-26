@@ -17,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatDialogModule} from '@angular/material/dialog';
 import { AuthguardServicesService } from './services/authService/authguard-services.service';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 
@@ -74,7 +75,8 @@ import { FilterPipePipe } from './Pipe/filter-pipe.pipe';
     MatCardModule,
     MatButtonModule,
     MatMenuModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule
   ],
   providers: [ AuthguardServicesService ],
   bootstrap: [AppComponent]

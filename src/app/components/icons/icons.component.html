@@ -1,15 +1,15 @@
 <div>
     <div fxLayout="row" class="icons" fxFlex="100" *ngIf="!isTrashComponent">
-        <div class="icon" fxLayoutAlign="center center" fxFlex="15">
+        <div class="icon" fxLayoutAlign="center center" fxFlex="15" matTooltip="Remaind me" >
             <img width="21px" src="../../../assets/googleKeep/remaindme.svg" alt="" srcset="">
         </div>
-        <div class="icon" fxLayoutAlign="center center" fxFlex="15">
+        <div class="icon" fxLayoutAlign="center center" fxFlex="15" matTooltip="Collaborator">
             <img width="21px" src="../../../assets/googleKeep/collab.svg" alt="" srcset="">
         </div>
 
 
-        <div class="icon" fxLayoutAlign="center center" fxFlex="15" [matMenuTriggerFor]="Menu">
-            <img width="21px" src="../../../assets/googleKeep/color.svg" alt="" srcset="">
+        <div class="icon" fxLayoutAlign="center center" fxFlex="15" [matMenuTriggerFor]="Menu" matTooltip="Change color">
+            <img width="21px" src="../../../assets/googleKeep/color.svg" alt="" srcset="" >
             <mat-menu #Menu="matMenu">
                 <div class="popup">
 
@@ -21,22 +21,22 @@
         </div>
 
 
-        <div class="icon" fxLayoutAlign="center center" fxFlex="15">
+        <div class="icon" fxLayoutAlign="center center" fxFlex="15" matTooltip="Add Image">
             <img width="21px" src="../../../assets/googleKeep/gallary.svg" alt="" srcset="">
         </div>
         <div>
-            <div class="icon" (click)="Archive()" fxLayoutAlign="center center" fxFlex="15"
+            <div class="icon" (click)="Archive()" fxLayoutAlign="center center" fxFlex="15" matTooltip="Delete Forever"
                 *ngIf="isDisplaynoteComponent">
                 <img width="21px" src="../../../assets/googleKeep/archive2.svg" alt="" srcset="">
             </div>
-            <div class="icon" (click)="Unarchive()" *ngIf="isArchiveComponent" fxLayoutAlign="center center"
+            <div class="icon" (click)="Unarchive()" *ngIf="isArchiveComponent" fxLayoutAlign="center center" matTooltip="Delete Forever"
                 fxFlex="15">
                 <img width="21px" src="../../../assets/googleKeep/unarchive_FILL0_wght400_GRAD0_opsz48.svg" alt=""
                     srcset="">
             </div>
         </div>
 
-        <div class="icon" fxLayoutAlign="center center" fxFlex="15">
+        <div class="icon" fxLayoutAlign="center center" fxFlex="15" matTooltip="More option">
             <img width="20px" src="../../../assets/googleKeep/option.svg" alt="" srcset="" [matMenuTriggerFor]="more">
             <mat-menu #more="matMenu">
                 <button mat-menu-item (click)="Trash()">Delete Note</button>
@@ -55,7 +55,8 @@
         <button mat-icon-button matTooltip="Delete Forever" class="icontrash" (click)="Delete()">
             <img src="../../../assets/googleKeep/delete_forever_FILL0_wght400_GRAD0_opsz48.svg" width="20px"
                 height="20px"></button>
-        <button mat-icon-button matTooltip="Restore" (click)="Trash()" class="icontrash">
+        <button mat-icon-button matTooltip="Restore" (click)="Trash()" class="icontrash"
+        matTooltip="Restore">
             <img src="../../../assets/googleKeep/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg" width="20px" height="20px"></button>
     </div>
 </div>

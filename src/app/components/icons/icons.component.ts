@@ -4,7 +4,8 @@ import { TrashComponent } from '../trash/trash.component';
 import { GetAllNotesComponent } from '../get-all-notes/get-all-notes.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ArchiveComponent } from '../archive/archive.component';
-
+import {TooltipPosition} from '@angular/material/tooltip';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-icons',
@@ -12,6 +13,9 @@ import { ArchiveComponent } from '../archive/archive.component';
   styleUrls: ['./icons.component.scss']
 })
 export class IconsComponent implements OnInit {
+
+  positionOptions: TooltipPosition[] = ['after', 'before', 'above', 'below', 'left', 'right'];
+  position = new FormControl(this.positionOptions[0]);
 
   @Input() NotesList:any;
 
