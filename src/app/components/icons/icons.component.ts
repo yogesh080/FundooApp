@@ -20,6 +20,7 @@ export class IconsComponent implements OnInit {
   @Output() TrashEvent = new EventEmitter<string>();
   @Output() ArchiveEvent = new EventEmitter<string>();
   @Output() UnarchiveEvent = new EventEmitter<string>();
+  @Output() DeleteEvent = new EventEmitter<string>();
 
   isDisplaynoteComponent=false;
   isArchiveComponent=false;
@@ -64,8 +65,9 @@ export class IconsComponent implements OnInit {
   Delete(){
     console.log(this.NotesList.notesId)
 
-    this.note.DeleteNote(this.NotesList.notesId).subscribe((response)=> {
+    this.note.DeleteNote(this.NotesList.notesId).subscribe((response:any)=> {
       console.log("Note Deleted Succesfully", response);
+      this.DeleteEvent.emit(response)
     }, (error: any) => {
       console.log(error);
     })

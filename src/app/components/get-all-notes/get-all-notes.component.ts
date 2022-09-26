@@ -44,6 +44,10 @@ export class GetAllNotesComponent implements OnInit {
     archiveMessage(event:any){
       this.getAllNotes();
     }
+
+    deleteMessage(event:any){
+      this.getAllNotes();
+    }
   }
 
 

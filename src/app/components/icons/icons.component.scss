@@ -27,6 +27,16 @@
 
 }
 
+.icontrash{
+  border-radius: 180px 180px 180px 180px;
+  padding: 2px;
+}
+
+.icontrash:hover{
+  background-color:rgb(169 145 145 / 16%);
+
+}
+
 .popup {
   display: flex;
   flex-wrap: wrap;
