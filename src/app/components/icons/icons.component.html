@@ -1,49 +1,62 @@
-<div fxLayout="row" class="icons" fxFlex="100">
-    <div class="icon" fxLayoutAlign="center center" fxFlex="15">
-        <img width="21px" src="../../../assets/googleKeep/remaindme.svg" alt="" srcset="">
-    </div>
-    <div class="icon" fxLayoutAlign="center center" fxFlex="15">
-        <img width="21px" src="../../../assets/googleKeep/collab.svg" alt="" srcset="">
-    </div>
+<div>
+    <div fxLayout="row" class="icons" fxFlex="100" *ngIf="!isTrashComponent">
+        <div class="icon" fxLayoutAlign="center center" fxFlex="15">
+            <img width="21px" src="../../../assets/googleKeep/remaindme.svg" alt="" srcset="">
+        </div>
+        <div class="icon" fxLayoutAlign="center center" fxFlex="15">
+            <img width="21px" src="../../../assets/googleKeep/collab.svg" alt="" srcset="">
+        </div>
 
 
-    <div class="icon" fxLayoutAlign="center center" fxFlex="15" [matMenuTriggerFor]="Menu">
-        <img width="21px" src="../../../assets/googleKeep/color.svg" alt="" srcset="">
-        <mat-menu #Menu="matMenu">
-            <div class="popup">
+        <div class="icon" fxLayoutAlign="center center" fxFlex="15" [matMenuTriggerFor]="Menu">
+            <img width="21px" src="../../../assets/googleKeep/color.svg" alt="" srcset="">
+            <mat-menu #Menu="matMenu">
+                <div class="popup">
 
-                <div *ngFor="let color of Allcolors" class="colorButton">
-                    <button [style.background]="color.code" id="colorbuttons" (click)="Color(color.name)"></button>
+                    <div *ngFor="let color of Allcolors" class="colorButton">
+                        <button [style.background]="color.code" id="colorbuttons" (click)="Color(color.name)"></button>
+                    </div>
                 </div>
+            </mat-menu>
+        </div>
+
+
+        <div class="icon" fxLayoutAlign="center center" fxFlex="15">
+            <img width="21px" src="../../../assets/googleKeep/gallary.svg" alt="" srcset="">
+        </div>
+        <div>
+            <div class="icon" (click)="Archive()" fxLayoutAlign="center center" fxFlex="15"
+                *ngIf="isDisplaynoteComponent">
+                <img width="21px" src="../../../assets/googleKeep/archive2.svg" alt="" srcset="">
             </div>
-        </mat-menu>
-    </div>
+            <div class="icon" (click)="Unarchive()" *ngIf="isArchiveComponent" fxLayoutAlign="center center"
+                fxFlex="15">
+                <img width="21px" src="../../../assets/googleKeep/unarchive_FILL0_wght400_GRAD0_opsz48.svg" alt=""
+                    srcset="">
+            </div>
+        </div>
+
+        <div class="icon" fxLayoutAlign="center center" fxFlex="15">
+            <img width="20px" src="../../../assets/googleKeep/option.svg" alt="" srcset="" [matMenuTriggerFor]="more">
+            <mat-menu #more="matMenu">
+                <button mat-menu-item (click)="Trash()">Delete Note</button>
+                <button mat-menu-item>Add label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>Make a copy</button>
+                <button mat-menu-item>Show checkboxes</button>
+            </mat-menu>
+        </div>
 
 
-    <div class="icon" fxLayoutAlign="center center" fxFlex="15">
-        <img width="21px" src="../../../assets/googleKeep/gallary.svg" alt="" srcset="">
+
     </div>
 
-    <div class="icon" (click)="Archive()" fxLayoutAlign="center center" fxFlex="15">
-        <img width="21px" src="../../../assets/googleKeep/archive2.svg" alt="" srcset="">
-    </div>
-    <div class="icon" fxLayoutAlign="center center" fxFlex="15">
-        <img width="20px" src="../../../assets/googleKeep/option.svg" alt="" srcset="" [matMenuTriggerFor]="more">
-        <mat-menu #more="matMenu">
-            <button mat-menu-item (click)="Trash()">Delete Note</button>
-            <button mat-menu-item>Add label</button>
-            <button mat-menu-item>Add drawing</button>
-            <button mat-menu-item>Make a copy</button>
-            <button mat-menu-item>Show checkboxes</button>
-        </mat-menu>
-    </div>
-
-    <div fxLayout="row">
+    <div fxLayout="row" *ngIf="isTrashComponent">
         <button mat-icon-button matTooltip="Delete Forever">
-                <img src="../../../assets/googleKeep/delete_forever_FILL0_wght400_GRAD0_opsz48.svg" width="20px" height="20px"></button>
-        <button mat-icon-button matTooltip="Restore" (click)="Trash()"> 
-                <img src="../../../assets/googleKeep/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg" (click)="Delete()" width="20px" height="20px"></button>
+            <img src="../../../assets/googleKeep/delete_forever_FILL0_wght400_GRAD0_opsz48.svg" width="20px"
+                height="20px"></button>
+        <button mat-icon-button matTooltip="Restore" (click)="Trash()">
+            <img src="../../../assets/googleKeep/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg"
+                (click)="Delete()" width="20px" height="20px"></button>
     </div>
-
-
 </div>

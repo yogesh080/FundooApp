@@ -10,6 +10,8 @@ import { NoteServicesService } from 'src/app/services/noteService/note-services.
 export class ArchiveComponent implements OnInit {
 
   notedata=[];
+  archiveNotes : any;
+  isArchive = false;
 
 
   constructor(private note: NoteServicesService) { }
@@ -30,6 +32,20 @@ export class ArchiveComponent implements OnInit {
         return obj.trash === false && obj.archive === true;
       })
     })
+  }
+
+
+  unarchiveMessage(event:any){
+    this.getAllNoteArchive();
+  }
+
+  
+  colorMessage(event:any){
+    this.getAllNoteArchive();
+  }
+
+  trashMessage(event:any){
+    this.getAllNoteArchive();
   }
 
 }

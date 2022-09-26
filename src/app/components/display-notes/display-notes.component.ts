@@ -16,6 +16,7 @@ export class DisplayNotesComponent implements OnInit {
   @Output() ColorEvent = new EventEmitter<string>();
   @Output() TrashEvent = new EventEmitter<string>();
   @Output() ArchiveEvent = new EventEmitter<string>();
+  @Output() UnarchiveEvent = new EventEmitter<string>();
 
 
 
@@ -44,6 +45,10 @@ export class DisplayNotesComponent implements OnInit {
 
   archiveMessage(event:any){
     this.ArchiveEvent.emit("reload done archive")
+  }
+
+  unarchiveMessage(event:any){
+    this.UnarchiveEvent.emit("Reload page after unarchive")
   }
 
 

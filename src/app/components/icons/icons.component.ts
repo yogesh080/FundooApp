@@ -1,6 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { NoteServicesService } from 'src/app/services/noteService/note-services.service';
 import { TrashComponent } from '../trash/trash.component';
+import { GetAllNotesComponent } from '../get-all-notes/get-all-notes.component';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ArchiveComponent } from '../archive/archive.component';
+
 
 @Component({
   selector: 'app-icons',
@@ -15,6 +19,13 @@ export class IconsComponent implements OnInit {
   @Output() ColorEvent = new EventEmitter<string>();
   @Output() TrashEvent = new EventEmitter<string>();
   @Output() ArchiveEvent = new EventEmitter<string>();
+  @Output() UnarchiveEvent = new EventEmitter<string>();
+
+  isDisplaynoteComponent=false;
+  isArchiveComponent=false;
+  isTrashComponent=false;
+
+
 
 
 
@@ -22,9 +33,28 @@ export class IconsComponent implements OnInit {
   {code:"#728FCE", name:"Teal"},{code:"#D16587", name:"Purple"},{code:"#ffffff", name:"White"}];
   
 
-  constructor(private note:NoteServicesService) { }
+  constructor(private note:NoteServicesService,private route: ActivatedRoute, private Route: Router) { }
 
   ngOnInit(): void {
+
+
+    let Comp = this.route.snapshot.component;
+
+
+    if(Comp == GetAllNotesComponent)
+    {
+      this.isDisplaynoteComponent=true;
+    }
+
+    if(Comp == TrashComponent)
+    {
+      this.isTrashComponent=true;
+    }
+
+    if(Comp == ArchiveComponent)
+    {
+      this.isArchiveComponent=true;
+    }
 
     console.log("Note list in icon: " + this.NotesList);
 
@@ -65,6 +95,17 @@ export class IconsComponent implements OnInit {
   
   }
 
+  Unarchive(){
+    console.log(this.NotesList.notesId);
+    
+    this.note.ArchiveNote(this.NotesList.notesId).subscribe((response:any) => {
+      console.log("Note Unarchived Successfuly", response);
+      this.UnarchiveEvent.emit(response);
+    }, (error: any) => {
+      console.log(error);
+    })
+  }
+
   Color(color:any){
     console.log("hello====>", color);
 
@@ -77,9 +118,5 @@ export class IconsComponent implements OnInit {
     })
 
   }
-
-  // sendMessage() {
-  //   this.ColorEvent.emit("halla madrid")
-  // }
 
 }

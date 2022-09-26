@@ -35,6 +35,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { TrashComponent } from './components/trash/trash.component';
 import { UpdateNoteComponent } from './components/update-note/update-note.component';
 import { ArchiveComponent } from './components/archive/archive.component';
+import { FilterPipePipe } from './Pipe/filter-pipe.pipe';
 // import { MustMatch } from './components/registration/_helpers/must-match.validator';
 
 @NgModule({
@@ -52,6 +53,7 @@ import { ArchiveComponent } from './components/archive/archive.component';
     TrashComponent,
     UpdateNoteComponent,
     ArchiveComponent,
+    FilterPipePipe,
     
   ],
   imports: [
