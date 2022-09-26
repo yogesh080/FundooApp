@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
 import { UpdateNoteComponent } from '../update-note/update-note.component';
+import { DataServiceService } from 'src/app/services/dataService/data-service.service';
 
 @Component({
   selector: 'app-display-notes',
@@ -20,12 +21,19 @@ export class DisplayNotesComponent implements OnInit {
   @Output() DeleteEvent = new EventEmitter<string>();
 
 
+  Search:any = '';
+
+
 
 
   
-  constructor( public dialog: MatDialog) { }
+  constructor( public dialog: MatDialog, private dataservice: DataServiceService ) { }
 
   ngOnInit(): void {
+    this.dataservice.currentMessage.subscribe(message => {
+      console.log(message)
+      this.Search = message
+    })
     console.log("Get all notes", this.NotesArray);
   }
 

@@ -34,7 +34,7 @@ export class IconsComponent implements OnInit {
 
 
 
-  Allcolors = [{code:"#FF6347", name:"Orange"},{code:"#FF4500", name:"Red"},{code:"#FFFF00", name:"Yellow"},{code:"#ADFF2F", name:"Green"},{code:"#43C6DB", name:"Blue"},
+  Allcolors = [{code:"#FF6347", name:"Orange"},{code:"#ff3333 ", name:"Red"},{code:"#FFFF00", name:"Yellow"},{code:"#ADFF2F", name:"Green"},{code:"#43C6DB", name:"Blue"},
   {code:"#728FCE", name:"Teal"},{code:"#D16587", name:"Purple"},{code:"#ffffff", name:"White"}];
   
 

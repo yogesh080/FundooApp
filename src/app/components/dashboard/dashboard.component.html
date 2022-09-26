@@ -9,7 +9,7 @@
             <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="2px" class="tooltip">
                 <img style="width: 24px; padding-left: 19px; height: 45px;"
                     src="../../../assets/googleKeep/searchsvg.svg" />
-                <input type="text" placeholder="Search" />
+                <input type="text" placeholder="Search" (keyup)="searchNote($event)" />
 
             </div>
         </div>
