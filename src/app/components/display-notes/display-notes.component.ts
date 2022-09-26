@@ -33,6 +33,8 @@ export class DisplayNotesComponent implements OnInit {
     this.dataservice.currentMessage.subscribe(message => {
       console.log(message)
       this.Search = message
+
+      
     })
     console.log("Get all notes", this.NotesArray);
   }
